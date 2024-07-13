@@ -203,3 +203,1952 @@ https://docs.getdbt.com/docs/configure-your-profile
 [0m16:59:40.737305 [debug] [MainThread]: Connection 'debug' was properly closed.
 [0m16:59:40.738135 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a1601d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a295310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d9e1ed0>]}
 [0m16:59:40.738881 [debug] [MainThread]: Flushing usage events
+[0m18:03:21.459076 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1090e9210>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109125e90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10914f790>]}
+
+
+============================== 18:03:21.471321 | 9f534909-af8c-4136-ac70-cf9c53ba389e ==============================
+[0m18:03:21.471321 [info ] [MainThread]: Running with dbt=1.8.3
+[0m18:03:21.472054 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': '/Users/omejevwe/.dbt', 'log_path': '/Users/omejevwe/Documents/DBT/dvdrental-analytics/logs', 'version_check': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt run', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m18:03:22.007674 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '9f534909-af8c-4136-ac70-cf9c53ba389e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1077b76d0>]}
+[0m18:03:22.057836 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '9f534909-af8c-4136-ac70-cf9c53ba389e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108ba5750>]}
+[0m18:03:22.060585 [info ] [MainThread]: Registered adapter: snowflake=1.8.3
+[0m18:03:22.086946 [debug] [MainThread]: checksum: 30bd4080c2bc8dee5936f8f60083ffbe1c906859d0fd965607c2144031479456, vars: {}, profile: , target: , version: 1.8.3
+[0m18:03:22.088130 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m18:03:22.088592 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '9f534909-af8c-4136-ac70-cf9c53ba389e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109fee050>]}
+[0m18:03:23.290423 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '9f534909-af8c-4136-ac70-cf9c53ba389e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a0bc310>]}
+[0m18:03:23.401527 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '9f534909-af8c-4136-ac70-cf9c53ba389e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a4da4d0>]}
+[0m18:03:23.402105 [info ] [MainThread]: Found 2 models, 4 data tests, 446 macros
+[0m18:03:23.402527 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '9f534909-af8c-4136-ac70-cf9c53ba389e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a0371d0>]}
+[0m18:03:23.404295 [info ] [MainThread]: 
+[0m18:03:23.404925 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m18:03:23.410577 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_dvdrentals'
+[0m18:03:23.424910 [debug] [ThreadPool]: Using snowflake connection "list_dvdrentals"
+[0m18:03:23.425774 [debug] [ThreadPool]: On list_dvdrentals: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "dvdrental_analytics", "target_name": "dev", "connection_name": "list_dvdrentals"} */
+show terse schemas in database dvdrentals
+    limit 10000
+[0m18:03:23.426274 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:03:25.402805 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 2.0 seconds
+[0m18:03:25.407112 [debug] [ThreadPool]: On list_dvdrentals: Close
+[0m18:03:25.895202 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dvdrentals, now list_dvdrentals_public)
+[0m18:03:25.912884 [debug] [ThreadPool]: Using snowflake connection "list_dvdrentals_public"
+[0m18:03:25.913479 [debug] [ThreadPool]: On list_dvdrentals_public: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "dvdrental_analytics", "target_name": "dev", "connection_name": "list_dvdrentals_public"} */
+show objects in dvdrentals.public limit 10000
+[0m18:03:25.913902 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m18:03:27.387374 [debug] [ThreadPool]: SQL status: SUCCESS 15 in 1.0 seconds
+[0m18:03:27.392211 [debug] [ThreadPool]: On list_dvdrentals_public: Close
+[0m18:03:27.850159 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '9f534909-af8c-4136-ac70-cf9c53ba389e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a3b3610>]}
+[0m18:03:27.868213 [info ] [MainThread]: Concurrency: 5 threads (target='dev')
+[0m18:03:27.888231 [info ] [MainThread]: 
+[0m18:03:27.895098 [debug] [Thread-1 (]: Began running node model.dvdrental_analytics.my_first_dbt_model
+[0m18:03:27.912169 [info ] [Thread-1 (]: 1 of 2 START sql table model public.my_first_dbt_model ......................... [RUN]
+[0m18:03:27.913107 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_dvdrentals_public, now model.dvdrental_analytics.my_first_dbt_model)
+[0m18:03:27.913637 [debug] [Thread-1 (]: Began compiling node model.dvdrental_analytics.my_first_dbt_model
+[0m18:03:27.925313 [debug] [Thread-1 (]: Writing injected SQL for node "model.dvdrental_analytics.my_first_dbt_model"
+[0m18:03:27.928948 [debug] [Thread-1 (]: Began executing node model.dvdrental_analytics.my_first_dbt_model
+[0m18:03:27.967118 [debug] [Thread-1 (]: Writing runtime sql for node "model.dvdrental_analytics.my_first_dbt_model"
+[0m18:03:27.968566 [debug] [Thread-1 (]: Using snowflake connection "model.dvdrental_analytics.my_first_dbt_model"
+[0m18:03:27.968981 [debug] [Thread-1 (]: On model.dvdrental_analytics.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "dvdrental_analytics", "target_name": "dev", "node_id": "model.dvdrental_analytics.my_first_dbt_model"} */
+create or replace transient table dvdrentals.public.my_first_dbt_model
+         as
+        (/*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+with source_data as (
+
+    select 1 as id
+    union all
+    select null as id
+
+)
+
+select *
+from source_data
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+        );
+[0m18:03:27.969613 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:03:30.306973 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 2.0 seconds
+[0m18:03:30.342523 [debug] [Thread-1 (]: On model.dvdrental_analytics.my_first_dbt_model: Close
+[0m18:03:30.791690 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9f534909-af8c-4136-ac70-cf9c53ba389e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b167ad0>]}
+[0m18:03:30.793188 [info ] [Thread-1 (]: 1 of 2 OK created sql table model public.my_first_dbt_model .................... [[32mSUCCESS 1[0m in 2.88s]
+[0m18:03:30.794514 [debug] [Thread-1 (]: Finished running node model.dvdrental_analytics.my_first_dbt_model
+[0m18:03:30.796006 [debug] [Thread-3 (]: Began running node model.dvdrental_analytics.my_second_dbt_model
+[0m18:03:30.797358 [info ] [Thread-3 (]: 2 of 2 START sql view model public.my_second_dbt_model ......................... [RUN]
+[0m18:03:30.798571 [debug] [Thread-3 (]: Acquiring new snowflake connection 'model.dvdrental_analytics.my_second_dbt_model'
+[0m18:03:30.799407 [debug] [Thread-3 (]: Began compiling node model.dvdrental_analytics.my_second_dbt_model
+[0m18:03:30.804456 [debug] [Thread-3 (]: Writing injected SQL for node "model.dvdrental_analytics.my_second_dbt_model"
+[0m18:03:30.806040 [debug] [Thread-3 (]: Began executing node model.dvdrental_analytics.my_second_dbt_model
+[0m18:03:30.834412 [debug] [Thread-3 (]: Writing runtime sql for node "model.dvdrental_analytics.my_second_dbt_model"
+[0m18:03:30.835675 [debug] [Thread-3 (]: Using snowflake connection "model.dvdrental_analytics.my_second_dbt_model"
+[0m18:03:30.836164 [debug] [Thread-3 (]: On model.dvdrental_analytics.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "dvdrental_analytics", "target_name": "dev", "node_id": "model.dvdrental_analytics.my_second_dbt_model"} */
+create or replace   view dvdrentals.public.my_second_dbt_model
+  
+   as (
+    -- Use the `ref` function to select from other models
+
+select *
+from dvdrentals.public.my_first_dbt_model
+where id = 1
+  );
+[0m18:03:30.836532 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m18:03:32.272364 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 1.0 seconds
+[0m18:03:32.277837 [debug] [Thread-3 (]: On model.dvdrental_analytics.my_second_dbt_model: Close
+[0m18:03:32.767691 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9f534909-af8c-4136-ac70-cf9c53ba389e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a54b710>]}
+[0m18:03:32.769046 [info ] [Thread-3 (]: 2 of 2 OK created sql view model public.my_second_dbt_model .................... [[32mSUCCESS 1[0m in 1.97s]
+[0m18:03:32.770261 [debug] [Thread-3 (]: Finished running node model.dvdrental_analytics.my_second_dbt_model
+[0m18:03:32.772702 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m18:03:32.773342 [debug] [MainThread]: Connection 'model.dvdrental_analytics.my_first_dbt_model' was properly closed.
+[0m18:03:32.773869 [debug] [MainThread]: Connection 'model.dvdrental_analytics.my_second_dbt_model' was properly closed.
+[0m18:03:32.774544 [info ] [MainThread]: 
+[0m18:03:32.775997 [info ] [MainThread]: Finished running 1 table model, 1 view model in 0 hours 0 minutes and 9.37 seconds (9.37s).
+[0m18:03:32.777849 [debug] [MainThread]: Command end result
+[0m18:03:32.821712 [info ] [MainThread]: 
+[0m18:03:32.822248 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m18:03:32.822684 [info ] [MainThread]: 
+[0m18:03:32.823126 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[0m18:03:32.826126 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 11.482815, "process_user_time": 3.373974, "process_kernel_time": 0.530827, "process_mem_max_rss": "135376896", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m18:03:32.827627 [debug] [MainThread]: Command `dbt run` succeeded at 18:03:32.827370 after 11.48 seconds
+[0m18:03:32.828662 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105475fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10915ba50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1055bd550>]}
+[0m18:03:32.829612 [debug] [MainThread]: Flushing usage events
+[0m19:35:14.699366 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112505710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11250fdd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11252f290>]}
+
+
+============================== 19:35:14.709341 | 6e479358-2470-4850-a78d-9f0182b8ee24 ==============================
+[0m19:35:14.709341 [info ] [MainThread]: Running with dbt=1.8.3
+[0m19:35:14.710366 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': '/Users/omejevwe/Documents/DBT/dvdrental-analytics/logs', 'profiles_dir': '/Users/omejevwe/.dbt', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'invocation_command': 'dbt run', 'log_format': 'default', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m19:35:15.341376 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '6e479358-2470-4850-a78d-9f0182b8ee24', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113376e90>]}
+[0m19:35:15.391934 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '6e479358-2470-4850-a78d-9f0182b8ee24', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111f89650>]}
+[0m19:35:15.394394 [info ] [MainThread]: Registered adapter: snowflake=1.8.3
+[0m19:35:15.425887 [debug] [MainThread]: checksum: 30bd4080c2bc8dee5936f8f60083ffbe1c906859d0fd965607c2144031479456, vars: {}, profile: , target: , version: 1.8.3
+[0m19:35:15.515346 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m19:35:15.515920 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '6e479358-2470-4850-a78d-9f0182b8ee24', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1110f6b10>]}
+[0m19:35:15.522697 [error] [MainThread]: Encountered an error:
+Parsing Error
+  Error reading dvdrental_analytics: schema.yml - Runtime Error
+    Syntax error near line 17
+    ------------------------------
+    14 |               - not_null
+    15 | 
+    16 |       - name: customer
+    17 |           description: 'This table has basic information about a customer, as well as some derived facts based on a customer's orders'
+    18 |         columns:
+    19 |           - name: customer_id
+    20 |             description: This is a unique identifier for a customer
+    
+    Raw Error:
+    ------------------------------
+    mapping values are not allowed in this context
+      in "<unicode string>", line 17, column 22
+[0m19:35:15.529838 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 0.9549352, "process_user_time": 1.81153, "process_kernel_time": 0.538271, "process_mem_max_rss": "119296000", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m19:35:15.530564 [debug] [MainThread]: Command `dbt run` failed at 19:35:15.530439 after 0.96 seconds
+[0m19:35:15.531009 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11253aa90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e85de90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e8f44d0>]}
+[0m19:35:15.531362 [debug] [MainThread]: Flushing usage events
+[0m19:36:43.826985 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109fba410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109ff6590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109ff6610>]}
+
+
+============================== 19:36:43.836103 | 762ed9a3-b836-4304-a78b-74b6a5754741 ==============================
+[0m19:36:43.836103 [info ] [MainThread]: Running with dbt=1.8.3
+[0m19:36:43.836928 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/Users/omejevwe/Documents/DBT/dvdrental-analytics/logs', 'profiles_dir': '/Users/omejevwe/.dbt', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'invocation_command': 'dbt run', 'send_anonymous_usage_stats': 'True'}
+[0m19:36:44.381897 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '762ed9a3-b836-4304-a78b-74b6a5754741', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10af7dc90>]}
+[0m19:36:44.433373 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '762ed9a3-b836-4304-a78b-74b6a5754741', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109a698d0>]}
+[0m19:36:44.435131 [info ] [MainThread]: Registered adapter: snowflake=1.8.3
+[0m19:36:44.459449 [debug] [MainThread]: checksum: 30bd4080c2bc8dee5936f8f60083ffbe1c906859d0fd965607c2144031479456, vars: {}, profile: , target: , version: 1.8.3
+[0m19:36:44.551964 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m19:36:44.552540 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '762ed9a3-b836-4304-a78b-74b6a5754741', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108bdaad0>]}
+[0m19:36:44.557708 [error] [MainThread]: Encountered an error:
+Parsing Error
+  Error reading dvdrental_analytics: schema.yml - Runtime Error
+    Syntax error near line 17
+    ------------------------------
+    14 |               - not_null
+    15 | 
+    16 |       - name: customer
+    17 |           description: This table has basic information about a customer, as well as some derived facts based on a customer's orders
+    18 |         columns:
+    19 |           - name: customer_id
+    20 |             description: This is a unique identifier for a customer
+    
+    Raw Error:
+    ------------------------------
+    mapping values are not allowed in this context
+      in "<unicode string>", line 17, column 22
+[0m19:36:44.560611 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 0.9690326, "process_user_time": 1.802487, "process_kernel_time": 0.473472, "process_mem_max_rss": "118542336", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m19:36:44.562462 [debug] [MainThread]: Command `dbt run` failed at 19:36:44.562217 after 0.97 seconds
+[0m19:36:44.563299 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10633dfd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109c598d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1063d86d0>]}
+[0m19:36:44.563785 [debug] [MainThread]: Flushing usage events
+[0m19:37:49.890963 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1144597d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1144be890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1144bef10>]}
+
+
+============================== 19:37:49.896350 | 4eb28282-02a5-46ae-a24a-1b575c938b6f ==============================
+[0m19:37:49.896350 [info ] [MainThread]: Running with dbt=1.8.3
+[0m19:37:49.897298 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/omejevwe/.dbt', 'version_check': 'True', 'warn_error': 'None', 'log_path': '/Users/omejevwe/Documents/DBT/dvdrental-analytics/logs', 'fail_fast': 'False', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'invocation_command': 'dbt run', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m19:37:50.243538 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '4eb28282-02a5-46ae-a24a-1b575c938b6f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1144beb90>]}
+[0m19:37:50.299427 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '4eb28282-02a5-46ae-a24a-1b575c938b6f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113f19650>]}
+[0m19:37:50.314980 [info ] [MainThread]: Registered adapter: snowflake=1.8.3
+[0m19:37:50.359961 [debug] [MainThread]: checksum: 30bd4080c2bc8dee5936f8f60083ffbe1c906859d0fd965607c2144031479456, vars: {}, profile: , target: , version: 1.8.3
+[0m19:37:50.447028 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m19:37:50.447626 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '4eb28282-02a5-46ae-a24a-1b575c938b6f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113086ad0>]}
+[0m19:37:50.453521 [error] [MainThread]: Encountered an error:
+Parsing Error
+  Error reading dvdrental_analytics: schema.yml - Runtime Error
+    Syntax error near line 17
+    ------------------------------
+    14 |               - not_null
+    15 | 
+    16 |       - name: customer
+    17 |           description: "This table has basic information about a customer, as well as some derived facts based on a customer's orders"
+    18 |         columns:
+    19 |           - name: customer_id
+    20 |             description: This is a unique identifier for a customer
+    
+    Raw Error:
+    ------------------------------
+    mapping values are not allowed in this context
+      in "<unicode string>", line 17, column 22
+[0m19:37:50.455011 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 0.62615776, "process_user_time": 1.623446, "process_kernel_time": 0.280473, "process_mem_max_rss": "119767040", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m19:37:50.456706 [debug] [MainThread]: Command `dbt run` failed at 19:37:50.456362 after 0.63 seconds
+[0m19:37:50.457430 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x114101250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1107e5e50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11087c310>]}
+[0m19:37:50.457930 [debug] [MainThread]: Flushing usage events
+[0m19:39:17.309186 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1111b0390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110154350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1111ef410>]}
+
+
+============================== 19:39:17.315306 | f40c54c0-8b29-43ea-9b36-f97d4a51352a ==============================
+[0m19:39:17.315306 [info ] [MainThread]: Running with dbt=1.8.3
+[0m19:39:17.316145 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/omejevwe/.dbt', 'version_check': 'True', 'warn_error': 'None', 'log_path': '/Users/omejevwe/Documents/DBT/dvdrental-analytics/logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'invocation_command': 'dbt run', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m19:39:17.671986 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'f40c54c0-8b29-43ea-9b36-f97d4a51352a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1120c7590>]}
+[0m19:39:17.725484 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'f40c54c0-8b29-43ea-9b36-f97d4a51352a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110c61910>]}
+[0m19:39:17.726535 [info ] [MainThread]: Registered adapter: snowflake=1.8.3
+[0m19:39:17.751644 [debug] [MainThread]: checksum: 30bd4080c2bc8dee5936f8f60083ffbe1c906859d0fd965607c2144031479456, vars: {}, profile: , target: , version: 1.8.3
+[0m19:39:17.842070 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m19:39:17.843035 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'f40c54c0-8b29-43ea-9b36-f97d4a51352a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110c34f90>]}
+[0m19:39:17.847445 [error] [MainThread]: Encountered an error:
+Parsing Error
+  Error reading dvdrental_analytics: schema.yml - Runtime Error
+    Syntax error near line 17
+    ------------------------------
+    14 |               - not_null
+    15 | 
+    16 |       - name: customer
+    17 |           description: 'This table has basic information about a customer, as well as some derived facts based on a customers orders'
+    18 |         columns:
+    19 |           - name: customer_id
+    20 |             description: 'This is a unique identifier for a customer'
+    
+    Raw Error:
+    ------------------------------
+    mapping values are not allowed in this context
+      in "<unicode string>", line 17, column 22
+[0m19:39:17.850140 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 0.6088663, "process_user_time": 1.621796, "process_kernel_time": 0.287264, "process_mem_max_rss": "119554048", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m19:39:17.851057 [debug] [MainThread]: Command `dbt run` failed at 19:39:17.850912 after 0.61 seconds
+[0m19:39:17.851572 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11120f250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d53de90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d5d4f10>]}
+[0m19:39:17.851915 [debug] [MainThread]: Flushing usage events
+[0m19:40:12.307799 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11417c150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1141c2610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1141db4d0>]}
+
+
+============================== 19:40:12.313008 | d8a3b372-2d5d-4558-8e75-e006d6960e43 ==============================
+[0m19:40:12.313008 [info ] [MainThread]: Running with dbt=1.8.3
+[0m19:40:12.313790 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/omejevwe/.dbt', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': '/Users/omejevwe/Documents/DBT/dvdrental-analytics/logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'invocation_command': 'dbt run', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m19:40:12.656859 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'd8a3b372-2d5d-4558-8e75-e006d6960e43', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x114200990>]}
+[0m19:40:12.706202 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'd8a3b372-2d5d-4558-8e75-e006d6960e43', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113c25a50>]}
+[0m19:40:12.707535 [info ] [MainThread]: Registered adapter: snowflake=1.8.3
+[0m19:40:12.729375 [debug] [MainThread]: checksum: 30bd4080c2bc8dee5936f8f60083ffbe1c906859d0fd965607c2144031479456, vars: {}, profile: , target: , version: 1.8.3
+[0m19:40:12.818143 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m19:40:12.818930 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'd8a3b372-2d5d-4558-8e75-e006d6960e43', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112d9ed90>]}
+[0m19:40:12.823849 [error] [MainThread]: Encountered an error:
+Parsing Error
+  Error reading dvdrental_analytics: schema.yml - Runtime Error
+    Syntax error near line 17
+    ------------------------------
+    14 |               - not_null
+    15 | 
+    16 |       - name: customer
+    17 |           description: This table has basic information about a customer, as well as some derived facts based on a customers orders
+    18 |         columns:
+    19 |           - name: customer_id
+    20 |             description: 'This is a unique identifier for a customer'
+    
+    Raw Error:
+    ------------------------------
+    mapping values are not allowed in this context
+      in "<unicode string>", line 17, column 22
+[0m19:40:12.825923 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 0.5798109, "process_user_time": 1.591566, "process_kernel_time": 0.275304, "process_mem_max_rss": "119103488", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m19:40:12.827135 [debug] [MainThread]: Command `dbt run` failed at 19:40:12.826871 after 0.58 seconds
+[0m19:40:12.827977 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110501fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1141e7190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11059c6d0>]}
+[0m19:40:12.828598 [debug] [MainThread]: Flushing usage events
+[0m19:40:42.209379 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104b6c3d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1046c8e10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104bcaad0>]}
+
+
+============================== 19:40:42.217790 | 3ff30a27-60a8-4861-b744-ad580d954a32 ==============================
+[0m19:40:42.217790 [info ] [MainThread]: Running with dbt=1.8.3
+[0m19:40:42.218611 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': '/Users/omejevwe/Documents/DBT/dvdrental-analytics/logs', 'fail_fast': 'False', 'profiles_dir': '/Users/omejevwe/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'invocation_command': 'dbt run', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m19:40:42.732870 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '3ff30a27-60a8-4861-b744-ad580d954a32', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105a04fd0>]}
+[0m19:40:42.781217 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '3ff30a27-60a8-4861-b744-ad580d954a32', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1046217d0>]}
+[0m19:40:42.782287 [info ] [MainThread]: Registered adapter: snowflake=1.8.3
+[0m19:40:42.805743 [debug] [MainThread]: checksum: 30bd4080c2bc8dee5936f8f60083ffbe1c906859d0fd965607c2144031479456, vars: {}, profile: , target: , version: 1.8.3
+[0m19:40:42.899266 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m19:40:42.900279 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '3ff30a27-60a8-4861-b744-ad580d954a32', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1037f2a50>]}
+[0m19:40:42.906710 [error] [MainThread]: Encountered an error:
+Parsing Error
+  Error reading dvdrental_analytics: schema.yml - Runtime Error
+    Syntax error near line 17
+    ------------------------------
+    14 |               - not_null
+    15 | 
+    16 |       - name: customer
+    17 |           description: This table has basic information about a customer as well as some derived facts based on a customers orders
+    18 |         columns:
+    19 |           - name: customer_id
+    20 |             description: 'This is a unique identifier for a customer'
+    
+    Raw Error:
+    ------------------------------
+    mapping values are not allowed in this context
+      in "<unicode string>", line 17, column 22
+[0m19:40:42.910169 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 0.7751263, "process_user_time": 1.702916, "process_kernel_time": 0.343024, "process_mem_max_rss": "119504896", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m19:40:42.910965 [debug] [MainThread]: Command `dbt run` failed at 19:40:42.910831 after 0.78 seconds
+[0m19:40:42.911442 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x100dade50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x100e44c10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x100e44350>]}
+[0m19:40:42.911818 [debug] [MainThread]: Flushing usage events
+[0m19:42:35.050878 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106275290>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1062ba350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1062db150>]}
+
+
+============================== 19:42:35.059648 | 4614cad9-28e7-4954-94ef-d63740ac5092 ==============================
+[0m19:42:35.059648 [info ] [MainThread]: Running with dbt=1.8.3
+[0m19:42:35.060424 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/omejevwe/.dbt', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/Users/omejevwe/Documents/DBT/dvdrental-analytics/logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt run', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m19:42:35.590661 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '4614cad9-28e7-4954-94ef-d63740ac5092', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1062b0a10>]}
+[0m19:42:35.645665 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '4614cad9-28e7-4954-94ef-d63740ac5092', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105d31750>]}
+[0m19:42:35.647233 [info ] [MainThread]: Registered adapter: snowflake=1.8.3
+[0m19:42:35.670100 [debug] [MainThread]: checksum: 30bd4080c2bc8dee5936f8f60083ffbe1c906859d0fd965607c2144031479456, vars: {}, profile: , target: , version: 1.8.3
+[0m19:42:35.769378 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m19:42:35.770517 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '4614cad9-28e7-4954-94ef-d63740ac5092', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104f0c590>]}
+[0m19:42:35.778965 [error] [MainThread]: Encountered an error:
+Parsing Error
+  Error reading dvdrental_analytics: schema.yml - Runtime Error
+    Syntax error near line 26
+    ------------------------------
+    23 |               - not_null
+    24 | 
+    25 |       - name: film
+    26 |           description: 'This table has basic information about available films'
+    27 |         columns:
+    28 |           - name: film_id
+    29 |             description: 'This is a unique identifier for the film table'
+    
+    Raw Error:
+    ------------------------------
+    mapping values are not allowed in this context
+      in "<unicode string>", line 26, column 22
+[0m19:42:35.781133 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 0.8168734, "process_user_time": 1.749488, "process_kernel_time": 0.403077, "process_mem_max_rss": "118743040", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m19:42:35.782497 [debug] [MainThread]: Command `dbt run` failed at 19:42:35.782247 after 0.82 seconds
+[0m19:42:35.783610 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x102601e50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x102698c10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x102698350>]}
+[0m19:42:35.784789 [debug] [MainThread]: Flushing usage events
+[0m19:42:51.825377 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d94b450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d96aad0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d96b150>]}
+
+
+============================== 19:42:51.832171 | ad378f95-f26b-4d86-a29a-24a4e5ea250b ==============================
+[0m19:42:51.832171 [info ] [MainThread]: Running with dbt=1.8.3
+[0m19:42:51.832820 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/omejevwe/.dbt', 'debug': 'False', 'fail_fast': 'False', 'log_path': '/Users/omejevwe/Documents/DBT/dvdrental-analytics/logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m19:42:52.175766 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'ad378f95-f26b-4d86-a29a-24a4e5ea250b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d977ed0>]}
+[0m19:42:52.224919 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'ad378f95-f26b-4d86-a29a-24a4e5ea250b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d3c1690>]}
+[0m19:42:52.225955 [info ] [MainThread]: Registered adapter: snowflake=1.8.3
+[0m19:42:52.248740 [debug] [MainThread]: checksum: 30bd4080c2bc8dee5936f8f60083ffbe1c906859d0fd965607c2144031479456, vars: {}, profile: , target: , version: 1.8.3
+[0m19:42:52.335727 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m19:42:52.336334 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'ad378f95-f26b-4d86-a29a-24a4e5ea250b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d5ad350>]}
+[0m19:42:53.304886 [error] [MainThread]: Encountered an error:
+Compilation Error in model active_customers (models/finance/active_customers.sql)
+  source() takes exactly two arguments (1 given)
+[0m19:42:53.306243 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 1.5492651, "process_user_time": 2.499241, "process_kernel_time": 0.330595, "process_mem_max_rss": "119558144", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m19:42:53.306844 [debug] [MainThread]: Command `dbt run` failed at 19:42:53.306742 after 1.55 seconds
+[0m19:42:53.307313 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d94bb10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109c99e90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d951fd0>]}
+[0m19:42:53.307742 [debug] [MainThread]: Flushing usage events
+[0m19:43:56.038777 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1124a0410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1124e1090>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1124d1910>]}
+
+
+============================== 19:43:56.044129 | eefcf947-2c95-4d37-80ad-196532ee08ec ==============================
+[0m19:43:56.044129 [info ] [MainThread]: Running with dbt=1.8.3
+[0m19:43:56.044812 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': '/Users/omejevwe/Documents/DBT/dvdrental-analytics/logs', 'profiles_dir': '/Users/omejevwe/.dbt', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'invocation_command': 'dbt run', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m19:43:56.399228 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'eefcf947-2c95-4d37-80ad-196532ee08ec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1124e1510>]}
+[0m19:43:56.448524 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'eefcf947-2c95-4d37-80ad-196532ee08ec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111f51690>]}
+[0m19:43:56.449557 [info ] [MainThread]: Registered adapter: snowflake=1.8.3
+[0m19:43:56.470802 [debug] [MainThread]: checksum: 30bd4080c2bc8dee5936f8f60083ffbe1c906859d0fd965607c2144031479456, vars: {}, profile: , target: , version: 1.8.3
+[0m19:43:56.563585 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m19:43:56.564182 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'eefcf947-2c95-4d37-80ad-196532ee08ec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1110c2a50>]}
+[0m19:43:57.581480 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `tests` config has been renamed to `data_tests`. Please see
+https://docs.getdbt.com/docs/build/data-tests#new-data_tests-syntax for more
+information.
+[0m19:43:57.582010 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'eefcf947-2c95-4d37-80ad-196532ee08ec', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112c5ff50>]}
+[0m19:43:57.823858 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'eefcf947-2c95-4d37-80ad-196532ee08ec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11366b210>]}
+[0m19:43:57.952600 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'eefcf947-2c95-4d37-80ad-196532ee08ec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11391c2d0>]}
+[0m19:43:57.953870 [info ] [MainThread]: Found 1 model, 6 data tests, 3 sources, 446 macros
+[0m19:43:57.954256 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'eefcf947-2c95-4d37-80ad-196532ee08ec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1137fff10>]}
+[0m19:43:57.956112 [info ] [MainThread]: 
+[0m19:43:57.956823 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m19:43:57.958038 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_dvdrentals'
+[0m19:43:57.973751 [debug] [ThreadPool]: Using snowflake connection "list_dvdrentals"
+[0m19:43:57.974350 [debug] [ThreadPool]: On list_dvdrentals: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "dvdrental_analytics", "target_name": "dev", "connection_name": "list_dvdrentals"} */
+show terse schemas in database dvdrentals
+    limit 10000
+[0m19:43:57.974897 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m19:44:02.385755 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 4.0 seconds
+[0m19:44:02.389420 [debug] [ThreadPool]: On list_dvdrentals: Close
+[0m19:44:02.924858 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dvdrentals, now list_dvdrentals_public)
+[0m19:44:02.941521 [debug] [ThreadPool]: Using snowflake connection "list_dvdrentals_public"
+[0m19:44:02.942171 [debug] [ThreadPool]: On list_dvdrentals_public: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "dvdrental_analytics", "target_name": "dev", "connection_name": "list_dvdrentals_public"} */
+show objects in dvdrentals.public limit 10000
+[0m19:44:02.942661 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m19:44:31.024702 [debug] [ThreadPool]: SQL status: SUCCESS 16 in 28.0 seconds
+[0m19:44:31.028498 [debug] [ThreadPool]: On list_dvdrentals_public: Close
+[0m19:44:31.865543 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'eefcf947-2c95-4d37-80ad-196532ee08ec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11372a410>]}
+[0m19:44:31.866397 [info ] [MainThread]: Concurrency: 5 threads (target='dev')
+[0m19:44:31.867101 [info ] [MainThread]: 
+[0m19:44:31.876116 [debug] [Thread-1 (]: Began running node model.dvdrental_analytics.active_customers
+[0m19:44:31.876943 [info ] [Thread-1 (]: 1 of 1 START sql view model public.active_customers ............................ [RUN]
+[0m19:44:31.877855 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_dvdrentals_public, now model.dvdrental_analytics.active_customers)
+[0m19:44:31.878630 [debug] [Thread-1 (]: Began compiling node model.dvdrental_analytics.active_customers
+[0m19:44:31.890402 [debug] [Thread-1 (]: Writing injected SQL for node "model.dvdrental_analytics.active_customers"
+[0m19:44:31.891893 [debug] [Thread-1 (]: Began executing node model.dvdrental_analytics.active_customers
+[0m19:44:31.927816 [debug] [Thread-1 (]: Writing runtime sql for node "model.dvdrental_analytics.active_customers"
+[0m19:44:31.929476 [debug] [Thread-1 (]: Using snowflake connection "model.dvdrental_analytics.active_customers"
+[0m19:44:31.929932 [debug] [Thread-1 (]: On model.dvdrental_analytics.active_customers: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "dvdrental_analytics", "target_name": "dev", "node_id": "model.dvdrental_analytics.active_customers"} */
+create or replace   view dvdrentals.public.active_customers
+  
+   as (
+    with customer as  (
+    select first_name,
+    last_name,
+    email,
+    active
+    
+    from dvdrentals.public.customer
+),
+final as (
+    select * from customer
+    where active = 1
+)
+select * from final
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- with cte_name as(
+-- select from base_table),
+-- cte_name2 as(
+-- select from second_base_table)
+-- final_as(select from base_table1 join base_table2)
+
+-- select * from final
+  );
+[0m19:44:31.930554 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m19:44:35.801149 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 4.0 seconds
+[0m19:44:35.830702 [debug] [Thread-1 (]: On model.dvdrental_analytics.active_customers: Close
+[0m19:44:36.488428 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'eefcf947-2c95-4d37-80ad-196532ee08ec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113683190>]}
+[0m19:44:36.489384 [info ] [Thread-1 (]: 1 of 1 OK created sql view model public.active_customers ....................... [[32mSUCCESS 1[0m in 4.61s]
+[0m19:44:36.490080 [debug] [Thread-1 (]: Finished running node model.dvdrental_analytics.active_customers
+[0m19:44:36.492018 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m19:44:36.492540 [debug] [MainThread]: Connection 'model.dvdrental_analytics.active_customers' was properly closed.
+[0m19:44:36.492934 [info ] [MainThread]: 
+[0m19:44:36.493282 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 38.54 seconds (38.54s).
+[0m19:44:36.494703 [debug] [MainThread]: Command end result
+[0m19:44:36.527422 [info ] [MainThread]: 
+[0m19:44:36.528334 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m19:44:36.529107 [info ] [MainThread]: 
+[0m19:44:36.529693 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m19:44:36.532889 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 40.560898, "process_user_time": 3.455285, "process_kernel_time": 0.469986, "process_mem_max_rss": "135868416", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m19:44:36.534135 [debug] [MainThread]: Command `dbt run` succeeded at 19:44:36.533948 after 40.56 seconds
+[0m19:44:36.534772 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e74de90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1124e0a90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113816590>]}
+[0m19:44:36.535179 [debug] [MainThread]: Flushing usage events
+[0m17:09:23.360944 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10956c710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1095ca6d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1095cad50>]}
+
+
+============================== 17:09:23.371674 | b6157af1-b2b8-4a5e-a649-f2aefa0907bd ==============================
+[0m17:09:23.371674 [info ] [MainThread]: Running with dbt=1.8.3
+[0m17:09:23.372734 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': '/Users/omejevwe/Documents/DBT/dvdrental-analytics/logs', 'debug': 'False', 'profiles_dir': '/Users/omejevwe/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt debug', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m17:09:23.396281 [info ] [MainThread]: dbt version: 1.8.3
+[0m17:09:23.396757 [info ] [MainThread]: python version: 3.11.5
+[0m17:09:23.397115 [info ] [MainThread]: python path: /Users/omejevwe/Documents/DBT/dbt-env/bin/python
+[0m17:09:23.397452 [info ] [MainThread]: os info: macOS-10.16-x86_64-i386-64bit
+[0m17:09:23.903302 [info ] [MainThread]: Using profiles dir at /Users/omejevwe/.dbt
+[0m17:09:23.903810 [info ] [MainThread]: Using profiles.yml file at /Users/omejevwe/.dbt/profiles.yml
+[0m17:09:23.904143 [info ] [MainThread]: Using dbt_project.yml file at /Users/omejevwe/Documents/DBT/dvdrental-analytics/dbt_project.yml
+[0m17:09:23.905227 [info ] [MainThread]: adapter type: snowflake
+[0m17:09:23.905639 [info ] [MainThread]: adapter version: 1.8.3
+[0m17:09:23.992914 [info ] [MainThread]: Configuration:
+[0m17:09:23.993390 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m17:09:23.993751 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m17:09:23.994070 [info ] [MainThread]: Required dependencies:
+[0m17:09:23.994523 [debug] [MainThread]: Executing "git --help"
+[0m17:09:24.274319 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--config-env=<name>=<envvar>] <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m17:09:24.276407 [debug] [MainThread]: STDERR: "b''"
+[0m17:09:24.276975 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m17:09:24.277408 [info ] [MainThread]: Connection:
+[0m17:09:24.277889 [info ] [MainThread]:   account: oe78375.eu-west-2
+[0m17:09:24.278219 [info ] [MainThread]:   user: ojevwe
+[0m17:09:24.278521 [info ] [MainThread]:   database: dvdrentals
+[0m17:09:24.278929 [info ] [MainThread]:   warehouse: compute_wh
+[0m17:09:24.279503 [info ] [MainThread]:   role: accountadmin
+[0m17:09:24.279876 [info ] [MainThread]:   schema: public
+[0m17:09:24.280348 [info ] [MainThread]:   authenticator: None
+[0m17:09:24.280706 [info ] [MainThread]:   oauth_client_id: None
+[0m17:09:24.281028 [info ] [MainThread]:   query_tag: None
+[0m17:09:24.281461 [info ] [MainThread]:   client_session_keep_alive: False
+[0m17:09:24.281804 [info ] [MainThread]:   host: None
+[0m17:09:24.282109 [info ] [MainThread]:   port: None
+[0m17:09:24.282400 [info ] [MainThread]:   proxy_host: None
+[0m17:09:24.282672 [info ] [MainThread]:   proxy_port: None
+[0m17:09:24.282941 [info ] [MainThread]:   protocol: None
+[0m17:09:24.283794 [info ] [MainThread]:   connect_retries: 1
+[0m17:09:24.284101 [info ] [MainThread]:   connect_timeout: None
+[0m17:09:24.284375 [info ] [MainThread]:   retry_on_database_errors: False
+[0m17:09:24.284634 [info ] [MainThread]:   retry_all: False
+[0m17:09:24.284899 [info ] [MainThread]:   insecure_mode: False
+[0m17:09:24.285172 [info ] [MainThread]:   reuse_connections: None
+[0m17:09:24.285797 [info ] [MainThread]: Registered adapter: snowflake=1.8.3
+[0m17:09:24.296075 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m17:09:24.300687 [debug] [MainThread]: Using snowflake connection "debug"
+[0m17:09:24.302097 [debug] [MainThread]: On debug: select 1 as id
+[0m17:09:24.303734 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:09:28.295414 [debug] [MainThread]: SQL status: SUCCESS 1 in 4.0 seconds
+[0m17:09:28.298147 [debug] [MainThread]: On debug: Close
+[0m17:09:28.807958 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m17:09:28.809326 [info ] [MainThread]: [32mAll checks passed![0m
+[0m17:09:28.815232 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": true, "command_wall_clock_time": 5.574936, "process_user_time": 1.86642, "process_kernel_time": 0.593321, "process_mem_max_rss": "123617280", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m17:09:28.816505 [debug] [MainThread]: Command `dbt debug` succeeded at 17:09:28.816257 after 5.58 seconds
+[0m17:09:28.817170 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m17:09:28.817774 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1058f1fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1095cac10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a6e6850>]}
+[0m17:09:28.818496 [debug] [MainThread]: Flushing usage events
+[0m17:31:41.311943 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e7f8bd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e7ee790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e857310>]}
+
+
+============================== 17:31:41.320257 | 00fed655-4fe4-4c0c-81f2-29f2bacbdede ==============================
+[0m17:31:41.320257 [info ] [MainThread]: Running with dbt=1.8.3
+[0m17:31:41.321030 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': '/Users/omejevwe/.dbt', 'log_path': '/Users/omejevwe/Documents/DBT/dvdrental-analytics/logs', 'fail_fast': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'invocation_command': 'dbt run -s active_customers', 'send_anonymous_usage_stats': 'True'}
+[0m17:31:41.898198 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '00fed655-4fe4-4c0c-81f2-29f2bacbdede', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f6657d0>]}
+[0m17:31:41.951464 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '00fed655-4fe4-4c0c-81f2-29f2bacbdede', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e2ad850>]}
+[0m17:31:41.953393 [info ] [MainThread]: Registered adapter: snowflake=1.8.3
+[0m17:31:41.994173 [debug] [MainThread]: checksum: 30bd4080c2bc8dee5936f8f60083ffbe1c906859d0fd965607c2144031479456, vars: {}, profile: , target: , version: 1.8.3
+[0m17:31:42.113594 [info ] [MainThread]: Unable to do partial parsing because profile has changed
+[0m17:31:42.114187 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m17:31:42.114630 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '00fed655-4fe4-4c0c-81f2-29f2bacbdede', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d41ac90>]}
+[0m17:31:43.365016 [error] [MainThread]: Encountered an error:
+Compilation Error
+  dbt found two sources with the name "dvdrentals_film".
+  
+  Since these resources have the same name, dbt will be unable to find the correct resource
+  when looking for source("dvdrentals", "film").
+  
+  To fix this, change the name of one of these resources:
+  - source.dvdrental_analytics.dvdrentals.film (models/schema.yml)
+  - source.dvdrental_analytics.dvdrentals.film (models/schema.yml)
+[0m17:31:43.367710 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 2.1688924, "process_user_time": 2.758723, "process_kernel_time": 0.517321, "process_mem_max_rss": "121659392", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m17:31:43.368387 [debug] [MainThread]: Command `dbt run` failed at 17:31:43.368266 after 2.17 seconds
+[0m17:31:43.368864 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e862f90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ab82050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f685410>]}
+[0m17:31:43.369324 [debug] [MainThread]: Flushing usage events
+[0m17:34:45.060006 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x114458990>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1144b6bd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1144b7250>]}
+
+
+============================== 17:34:45.067675 | 2b739996-a45c-47ec-b231-ba8e3406baa2 ==============================
+[0m17:34:45.067675 [info ] [MainThread]: Running with dbt=1.8.3
+[0m17:34:45.068286 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/Users/omejevwe/Documents/DBT/dvdrental-analytics/logs', 'profiles_dir': '/Users/omejevwe/.dbt', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run -s active_customers', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m17:34:45.537941 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '2b739996-a45c-47ec-b231-ba8e3406baa2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11449d850>]}
+[0m17:34:45.585644 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '2b739996-a45c-47ec-b231-ba8e3406baa2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113efdad0>]}
+[0m17:34:45.586825 [info ] [MainThread]: Registered adapter: snowflake=1.8.3
+[0m17:34:45.609246 [debug] [MainThread]: checksum: 30bd4080c2bc8dee5936f8f60083ffbe1c906859d0fd965607c2144031479456, vars: {}, profile: , target: , version: 1.8.3
+[0m17:34:45.718778 [info ] [MainThread]: Unable to do partial parsing because profile has changed
+[0m17:34:45.719541 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m17:34:45.720717 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '2b739996-a45c-47ec-b231-ba8e3406baa2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1130f0710>]}
+[0m17:34:46.809287 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `tests` config has been renamed to `data_tests`. Please see
+https://docs.getdbt.com/docs/build/data-tests#new-data_tests-syntax for more
+information.
+[0m17:34:46.809934 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '2b739996-a45c-47ec-b231-ba8e3406baa2', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1155a47d0>]}
+[0m17:34:47.019989 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '2b739996-a45c-47ec-b231-ba8e3406baa2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11568b710>]}
+[0m17:34:47.140365 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '2b739996-a45c-47ec-b231-ba8e3406baa2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1158cc450>]}
+[0m17:34:47.140942 [info ] [MainThread]: Found 2 models, 8 data tests, 4 sources, 446 macros
+[0m17:34:47.141293 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '2b739996-a45c-47ec-b231-ba8e3406baa2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112ffa410>]}
+[0m17:34:47.142972 [info ] [MainThread]: 
+[0m17:34:47.143673 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m17:34:47.144774 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_dev'
+[0m17:34:47.159570 [debug] [ThreadPool]: Using snowflake connection "list_dev"
+[0m17:34:47.160213 [debug] [ThreadPool]: On list_dev: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "dvdrental_analytics", "target_name": "dev", "connection_name": "list_dev"} */
+show terse schemas in database dev
+    limit 10000
+[0m17:34:47.160614 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:34:49.020729 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 2.0 seconds
+[0m17:34:49.025602 [debug] [ThreadPool]: On list_dev: Close
+[0m17:34:49.546508 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dev, now list_dev_public)
+[0m17:34:49.559334 [debug] [ThreadPool]: Using snowflake connection "list_dev_public"
+[0m17:34:49.559927 [debug] [ThreadPool]: On list_dev_public: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "dvdrental_analytics", "target_name": "dev", "connection_name": "list_dev_public"} */
+show objects in dev.public limit 10000
+[0m17:34:49.560307 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m17:34:51.125395 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 2.0 seconds
+[0m17:34:51.129849 [debug] [ThreadPool]: On list_dev_public: Close
+[0m17:34:51.647677 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '2b739996-a45c-47ec-b231-ba8e3406baa2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1158b4ad0>]}
+[0m17:34:51.648397 [info ] [MainThread]: Concurrency: 5 threads (target='dev')
+[0m17:34:51.648872 [info ] [MainThread]: 
+[0m17:34:51.657234 [debug] [Thread-1 (]: Began running node model.dvdrental_analytics.active_customers
+[0m17:34:51.657996 [info ] [Thread-1 (]: 1 of 1 START sql table model public.active_customers ........................... [RUN]
+[0m17:34:51.658661 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_dev_public, now model.dvdrental_analytics.active_customers)
+[0m17:34:51.659052 [debug] [Thread-1 (]: Began compiling node model.dvdrental_analytics.active_customers
+[0m17:34:51.668700 [debug] [Thread-1 (]: Writing injected SQL for node "model.dvdrental_analytics.active_customers"
+[0m17:34:51.671152 [debug] [Thread-1 (]: Began executing node model.dvdrental_analytics.active_customers
+[0m17:34:51.704951 [debug] [Thread-1 (]: Writing runtime sql for node "model.dvdrental_analytics.active_customers"
+[0m17:34:51.706359 [debug] [Thread-1 (]: Using snowflake connection "model.dvdrental_analytics.active_customers"
+[0m17:34:51.706899 [debug] [Thread-1 (]: On model.dvdrental_analytics.active_customers: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "dvdrental_analytics", "target_name": "dev", "node_id": "model.dvdrental_analytics.active_customers"} */
+create or replace transient table dev.public.active_customers
+         as
+        (with customer as  (
+    select first_name,
+    last_name,
+    email,
+    active
+    
+    from dvdrentals.public.customer
+),
+final as (
+    select * from customer
+    where active = 1
+)
+select * from final
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- with cte_name as(
+-- select from base_table),
+-- cte_name2 as(
+-- select from second_base_table)
+-- final_as(select from base_table1 join base_table2)
+
+-- select * from final
+        );
+[0m17:34:51.707318 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m17:34:53.928295 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 2.0 seconds
+[0m17:34:53.975664 [debug] [Thread-1 (]: On model.dvdrental_analytics.active_customers: Close
+[0m17:34:54.516036 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2b739996-a45c-47ec-b231-ba8e3406baa2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1164eee10>]}
+[0m17:34:54.517471 [info ] [Thread-1 (]: 1 of 1 OK created sql table model public.active_customers ...................... [[32mSUCCESS 1[0m in 2.86s]
+[0m17:34:54.518624 [debug] [Thread-1 (]: Finished running node model.dvdrental_analytics.active_customers
+[0m17:34:54.521028 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m17:34:54.521853 [debug] [MainThread]: Connection 'model.dvdrental_analytics.active_customers' was properly closed.
+[0m17:34:54.522475 [info ] [MainThread]: 
+[0m17:34:54.523045 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 7.38 seconds (7.38s).
+[0m17:34:54.524106 [debug] [MainThread]: Command end result
+[0m17:34:54.576033 [info ] [MainThread]: 
+[0m17:34:54.579909 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m17:34:54.584946 [info ] [MainThread]: 
+[0m17:34:54.587898 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m17:34:54.599172 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 9.603793, "process_user_time": 3.3959, "process_kernel_time": 0.523617, "process_mem_max_rss": "136220672", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m17:34:54.601628 [debug] [MainThread]: Command `dbt run` succeeded at 17:34:54.600723 after 9.61 seconds
+[0m17:34:54.602650 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1107e2050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110929550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11087cf10>]}
+[0m17:34:54.603391 [debug] [MainThread]: Flushing usage events
+[0m18:36:19.762468 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10517b7d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105192250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1051928d0>]}
+
+
+============================== 18:36:19.781523 | beeb039c-cdfd-4137-8ffc-ec995c345ed3 ==============================
+[0m18:36:19.781523 [info ] [MainThread]: Running with dbt=1.8.3
+[0m18:36:19.783855 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': '/Users/omejevwe/.dbt', 'log_path': '/Users/omejevwe/Documents/DBT/dvdrental-analytics/logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt run', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m18:36:21.249234 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'beeb039c-cdfd-4137-8ffc-ec995c345ed3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105fd5d50>]}
+[0m18:36:21.379540 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'beeb039c-cdfd-4137-8ffc-ec995c345ed3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104a6d490>]}
+[0m18:36:21.381524 [info ] [MainThread]: Registered adapter: snowflake=1.8.3
+[0m18:36:21.451711 [debug] [MainThread]: checksum: 30bd4080c2bc8dee5936f8f60083ffbe1c906859d0fd965607c2144031479456, vars: {}, profile: , target: , version: 1.8.3
+[0m18:36:21.862250 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 2 files changed.
+[0m18:36:21.864061 [debug] [MainThread]: Partial parsing: updated file: dvdrental_analytics://models/schema.yml
+[0m18:36:21.864940 [debug] [MainThread]: Partial parsing: updated file: dvdrental_analytics://models/finance/top_loyal_customers.sql
+[0m18:36:22.414653 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `tests` config has been renamed to `data_tests`. Please see
+https://docs.getdbt.com/docs/build/data-tests#new-data_tests-syntax for more
+information.
+[0m18:36:22.415714 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'beeb039c-cdfd-4137-8ffc-ec995c345ed3', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1062bfd10>]}
+[0m18:36:22.776937 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'beeb039c-cdfd-4137-8ffc-ec995c345ed3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105ed3e90>]}
+[0m18:36:22.971095 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'beeb039c-cdfd-4137-8ffc-ec995c345ed3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10641e310>]}
+[0m18:36:22.972028 [info ] [MainThread]: Found 2 models, 16 data tests, 8 sources, 446 macros
+[0m18:36:22.972684 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'beeb039c-cdfd-4137-8ffc-ec995c345ed3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10638fdd0>]}
+[0m18:36:22.977632 [info ] [MainThread]: 
+[0m18:36:22.978743 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m18:36:22.988156 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_dev'
+[0m18:36:23.024125 [debug] [ThreadPool]: Using snowflake connection "list_dev"
+[0m18:36:23.025052 [debug] [ThreadPool]: On list_dev: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "dvdrental_analytics", "target_name": "dev", "connection_name": "list_dev"} */
+show terse schemas in database dev
+    limit 10000
+[0m18:36:23.026379 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:36:25.078446 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 2.0 seconds
+[0m18:36:25.081142 [debug] [ThreadPool]: On list_dev: Close
+[0m18:36:25.588966 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dev, now list_dev_public)
+[0m18:36:25.605590 [debug] [ThreadPool]: Using snowflake connection "list_dev_public"
+[0m18:36:25.606866 [debug] [ThreadPool]: On list_dev_public: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "dvdrental_analytics", "target_name": "dev", "connection_name": "list_dev_public"} */
+show objects in dev.public limit 10000
+[0m18:36:25.607675 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m18:36:27.206996 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 2.0 seconds
+[0m18:36:27.210074 [debug] [ThreadPool]: On list_dev_public: Close
+[0m18:36:27.721849 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'beeb039c-cdfd-4137-8ffc-ec995c345ed3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10513b750>]}
+[0m18:36:27.723317 [info ] [MainThread]: Concurrency: 5 threads (target='dev')
+[0m18:36:27.724105 [info ] [MainThread]: 
+[0m18:36:27.729715 [debug] [Thread-1 (]: Began running node model.dvdrental_analytics.active_customers
+[0m18:36:27.730677 [debug] [Thread-2 (]: Began running node model.dvdrental_analytics.top_loyal_customers
+[0m18:36:27.731562 [info ] [Thread-1 (]: 1 of 2 START sql table model public.active_customers ........................... [RUN]
+[0m18:36:27.732564 [info ] [Thread-2 (]: 2 of 2 START sql table model public.top_loyal_customers ........................ [RUN]
+[0m18:36:27.733619 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_dev_public, now model.dvdrental_analytics.active_customers)
+[0m18:36:27.735031 [debug] [Thread-2 (]: Acquiring new snowflake connection 'model.dvdrental_analytics.top_loyal_customers'
+[0m18:36:27.737214 [debug] [Thread-1 (]: Began compiling node model.dvdrental_analytics.active_customers
+[0m18:36:27.738461 [debug] [Thread-2 (]: Began compiling node model.dvdrental_analytics.top_loyal_customers
+[0m18:36:27.752583 [debug] [Thread-1 (]: Writing injected SQL for node "model.dvdrental_analytics.active_customers"
+[0m18:36:27.760267 [debug] [Thread-2 (]: Writing injected SQL for node "model.dvdrental_analytics.top_loyal_customers"
+[0m18:36:27.762312 [debug] [Thread-1 (]: Began executing node model.dvdrental_analytics.active_customers
+[0m18:36:27.780190 [debug] [Thread-2 (]: Began executing node model.dvdrental_analytics.top_loyal_customers
+[0m18:36:27.863184 [debug] [Thread-1 (]: Writing runtime sql for node "model.dvdrental_analytics.active_customers"
+[0m18:36:27.866290 [debug] [Thread-1 (]: Using snowflake connection "model.dvdrental_analytics.active_customers"
+[0m18:36:27.867230 [debug] [Thread-1 (]: On model.dvdrental_analytics.active_customers: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "dvdrental_analytics", "target_name": "dev", "node_id": "model.dvdrental_analytics.active_customers"} */
+create or replace transient table dev.public.active_customers
+         as
+        (with customer as  (
+    select first_name,
+    last_name,
+    email,
+    active
+    
+    from dvdrentals.public.customer
+),
+final as (
+    select * from customer
+    where active = 1
+)
+select * from final
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- with cte_name as(
+-- select from base_table),
+-- cte_name2 as(
+-- select from second_base_table)
+-- final_as(select from base_table1 join base_table2)
+
+-- select * from final
+        );
+[0m18:36:27.872055 [debug] [Thread-2 (]: Writing runtime sql for node "model.dvdrental_analytics.top_loyal_customers"
+[0m18:36:27.873073 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:36:27.878140 [debug] [Thread-2 (]: Using snowflake connection "model.dvdrental_analytics.top_loyal_customers"
+[0m18:36:27.879257 [debug] [Thread-2 (]: On model.dvdrental_analytics.top_loyal_customers: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "dvdrental_analytics", "target_name": "dev", "node_id": "model.dvdrental_analytics.top_loyal_customers"} */
+create or replace transient table dev.public.top_loyal_customers
+         as
+        (with customers_info as (
+SELECT first_name ||' '|| last_name AS full_name, 
+    email
+from dvdrentals.public.customer
+),
+final as(
+    Select full_name,
+     address, 
+     phone, 
+     city, 
+     country, 
+     sum(amount) AS total_purchase
+FROM customers_info cs
+JOIN dvdrentals.public.address ad
+ON cs.address_id = ad.address_id
+JOIN dvdrentals.public.city ct
+ON ad.city_id = ct.city_id
+JOIN dvdrentals.public.country cy
+ON ct.country_id = cy.country_id
+JOIN dvdrentals.public.payment pm
+ON cs.customer_id = pm.customer_id
+GROUP BY 1, 2, 3, 4, 5, 6
+ORDER BY 7 DESC
+LIMIT 10
+)
+
+select * from final
+        );
+[0m18:36:27.880914 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m18:36:29.224493 [debug] [Thread-2 (]: Snowflake adapter: Snowflake query id: 01b57de0-0000-f480-0000-0001bc7a357d
+[0m18:36:29.226105 [debug] [Thread-2 (]: Snowflake adapter: Snowflake error: 000904 (42000): SQL compilation error: error line 17 at position 3
+invalid identifier 'CS.ADDRESS_ID'
+[0m18:36:29.227184 [debug] [Thread-2 (]: On model.dvdrental_analytics.top_loyal_customers: Close
+[0m18:36:29.732242 [debug] [Thread-2 (]: Database Error in model top_loyal_customers (models/finance/top_loyal_customers.sql)
+  000904 (42000): SQL compilation error: error line 17 at position 3
+  invalid identifier 'CS.ADDRESS_ID'
+  compiled Code at target/run/dvdrental_analytics/models/finance/top_loyal_customers.sql
+[0m18:36:29.734654 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'beeb039c-cdfd-4137-8ffc-ec995c345ed3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10714e490>]}
+[0m18:36:29.736435 [error] [Thread-2 (]: 2 of 2 ERROR creating sql table model public.top_loyal_customers ............... [[31mERROR[0m in 2.00s]
+[0m18:36:29.737734 [debug] [Thread-2 (]: Finished running node model.dvdrental_analytics.top_loyal_customers
+[0m18:36:29.823413 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 2.0 seconds
+[0m18:36:29.885539 [debug] [Thread-1 (]: On model.dvdrental_analytics.active_customers: Close
+[0m18:36:30.401299 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'beeb039c-cdfd-4137-8ffc-ec995c345ed3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106684790>]}
+[0m18:36:30.402481 [info ] [Thread-1 (]: 1 of 2 OK created sql table model public.active_customers ...................... [[32mSUCCESS 1[0m in 2.67s]
+[0m18:36:30.403625 [debug] [Thread-1 (]: Finished running node model.dvdrental_analytics.active_customers
+[0m18:36:30.406237 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m18:36:30.406990 [debug] [MainThread]: Connection 'model.dvdrental_analytics.active_customers' was properly closed.
+[0m18:36:30.407500 [debug] [MainThread]: Connection 'model.dvdrental_analytics.top_loyal_customers' was properly closed.
+[0m18:36:30.408309 [info ] [MainThread]: 
+[0m18:36:30.409090 [info ] [MainThread]: Finished running 2 table models in 0 hours 0 minutes and 7.43 seconds (7.43s).
+[0m18:36:30.410801 [debug] [MainThread]: Command end result
+[0m18:36:30.475049 [info ] [MainThread]: 
+[0m18:36:30.477343 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m18:36:30.478306 [info ] [MainThread]: 
+[0m18:36:30.479165 [error] [MainThread]:   Database Error in model top_loyal_customers (models/finance/top_loyal_customers.sql)
+  000904 (42000): SQL compilation error: error line 17 at position 3
+  invalid identifier 'CS.ADDRESS_ID'
+  compiled Code at target/run/dvdrental_analytics/models/finance/top_loyal_customers.sql
+[0m18:36:30.480136 [info ] [MainThread]: 
+[0m18:36:30.481252 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=1 SKIP=0 TOTAL=2
+[0m18:36:30.486509 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 12.081542, "process_user_time": 5.037961, "process_kernel_time": 1.011218, "process_mem_max_rss": "136806400", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m18:36:30.487683 [debug] [MainThread]: Command `dbt run` failed at 18:36:30.487458 after 12.08 seconds
+[0m18:36:30.488578 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105192050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x101339e50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1013d0350>]}
+[0m18:36:30.489566 [debug] [MainThread]: Flushing usage events
+[0m18:38:59.240458 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105620a50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105664a50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10567f390>]}
+
+
+============================== 18:38:59.251599 | e964839f-d56f-4b91-afd8-209e677cd0a4 ==============================
+[0m18:38:59.251599 [info ] [MainThread]: Running with dbt=1.8.3
+[0m18:38:59.252819 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/omejevwe/.dbt', 'version_check': 'True', 'debug': 'False', 'log_path': '/Users/omejevwe/Documents/DBT/dvdrental-analytics/logs', 'warn_error': 'None', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt run', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m18:39:00.072732 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'e964839f-d56f-4b91-afd8-209e677cd0a4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1065b5b10>]}
+[0m18:39:00.166014 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'e964839f-d56f-4b91-afd8-209e677cd0a4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1050d5910>]}
+[0m18:39:00.168141 [info ] [MainThread]: Registered adapter: snowflake=1.8.3
+[0m18:39:00.209574 [debug] [MainThread]: checksum: 30bd4080c2bc8dee5936f8f60083ffbe1c906859d0fd965607c2144031479456, vars: {}, profile: , target: , version: 1.8.3
+[0m18:39:00.511620 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m18:39:00.512845 [debug] [MainThread]: Partial parsing: updated file: dvdrental_analytics://models/finance/top_loyal_customers.sql
+[0m18:39:01.014600 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'e964839f-d56f-4b91-afd8-209e677cd0a4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10647a110>]}
+[0m18:39:01.207428 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'e964839f-d56f-4b91-afd8-209e677cd0a4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104a72510>]}
+[0m18:39:01.208396 [info ] [MainThread]: Found 2 models, 16 data tests, 8 sources, 446 macros
+[0m18:39:01.209096 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e964839f-d56f-4b91-afd8-209e677cd0a4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x101aed690>]}
+[0m18:39:01.212610 [info ] [MainThread]: 
+[0m18:39:01.213718 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m18:39:01.222411 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_dev'
+[0m18:39:01.252877 [debug] [ThreadPool]: Using snowflake connection "list_dev"
+[0m18:39:01.254285 [debug] [ThreadPool]: On list_dev: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "dvdrental_analytics", "target_name": "dev", "connection_name": "list_dev"} */
+show terse schemas in database dev
+    limit 10000
+[0m18:39:01.255072 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:39:03.479351 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 2.0 seconds
+[0m18:39:03.482309 [debug] [ThreadPool]: On list_dev: Close
+[0m18:39:04.026965 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dev, now list_dev_public)
+[0m18:39:04.043132 [debug] [ThreadPool]: Using snowflake connection "list_dev_public"
+[0m18:39:04.043879 [debug] [ThreadPool]: On list_dev_public: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "dvdrental_analytics", "target_name": "dev", "connection_name": "list_dev_public"} */
+show objects in dev.public limit 10000
+[0m18:39:04.044414 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m18:39:05.597970 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 2.0 seconds
+[0m18:39:05.601091 [debug] [ThreadPool]: On list_dev_public: Close
+[0m18:39:06.147986 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e964839f-d56f-4b91-afd8-209e677cd0a4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106895490>]}
+[0m18:39:06.150584 [info ] [MainThread]: Concurrency: 5 threads (target='dev')
+[0m18:39:06.151326 [info ] [MainThread]: 
+[0m18:39:06.157084 [debug] [Thread-1 (]: Began running node model.dvdrental_analytics.active_customers
+[0m18:39:06.158773 [info ] [Thread-1 (]: 1 of 2 START sql table model public.active_customers ........................... [RUN]
+[0m18:39:06.159809 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_dev_public, now model.dvdrental_analytics.active_customers)
+[0m18:39:06.160592 [debug] [Thread-1 (]: Began compiling node model.dvdrental_analytics.active_customers
+[0m18:39:06.170341 [debug] [Thread-2 (]: Began running node model.dvdrental_analytics.top_loyal_customers
+[0m18:39:06.172545 [info ] [Thread-2 (]: 2 of 2 START sql table model public.top_loyal_customers ........................ [RUN]
+[0m18:39:06.174296 [debug] [Thread-2 (]: Acquiring new snowflake connection 'model.dvdrental_analytics.top_loyal_customers'
+[0m18:39:06.175174 [debug] [Thread-2 (]: Began compiling node model.dvdrental_analytics.top_loyal_customers
+[0m18:39:06.188388 [debug] [Thread-1 (]: Writing injected SQL for node "model.dvdrental_analytics.active_customers"
+[0m18:39:06.203762 [debug] [Thread-2 (]: Writing injected SQL for node "model.dvdrental_analytics.top_loyal_customers"
+[0m18:39:06.205696 [debug] [Thread-2 (]: Began executing node model.dvdrental_analytics.top_loyal_customers
+[0m18:39:06.222894 [debug] [Thread-1 (]: Began executing node model.dvdrental_analytics.active_customers
+[0m18:39:06.366374 [debug] [Thread-2 (]: Writing runtime sql for node "model.dvdrental_analytics.top_loyal_customers"
+[0m18:39:06.368441 [debug] [Thread-1 (]: Writing runtime sql for node "model.dvdrental_analytics.active_customers"
+[0m18:39:06.372071 [debug] [Thread-2 (]: Using snowflake connection "model.dvdrental_analytics.top_loyal_customers"
+[0m18:39:06.372912 [debug] [Thread-2 (]: On model.dvdrental_analytics.top_loyal_customers: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "dvdrental_analytics", "target_name": "dev", "node_id": "model.dvdrental_analytics.top_loyal_customers"} */
+create or replace transient table dev.public.top_loyal_customers
+         as
+        (with customers_info as (
+SELECT first_name ||' '|| last_name AS full_name, 
+    address_id,
+    email
+from dvdrentals.public.customer
+),
+final as(
+    Select full_name,
+     address, 
+     phone, 
+     city, 
+     country, 
+     sum(amount) AS total_purchase
+FROM customers_info cs
+JOIN dvdrentals.public.address ad
+ON cs.address_id = ad.address_id
+JOIN dvdrentals.public.city ct
+ON ad.city_id = ct.city_id
+JOIN dvdrentals.public.country cy
+ON ct.country_id = cy.country_id
+JOIN dvdrentals.public.payment pm
+ON cs.customer_id = pm.customer_id
+GROUP BY 1, 2, 3, 4, 5, 6
+ORDER BY 7 DESC
+LIMIT 10
+)
+
+select * from final
+        );
+[0m18:39:06.373714 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m18:39:06.375317 [debug] [Thread-1 (]: Using snowflake connection "model.dvdrental_analytics.active_customers"
+[0m18:39:06.376065 [debug] [Thread-1 (]: On model.dvdrental_analytics.active_customers: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "dvdrental_analytics", "target_name": "dev", "node_id": "model.dvdrental_analytics.active_customers"} */
+create or replace transient table dev.public.active_customers
+         as
+        (with customer as  (
+    select first_name,
+    last_name,
+    email,
+    active
+    
+    from dvdrentals.public.customer
+),
+final as (
+    select * from customer
+    where active = 1
+)
+select * from final
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- with cte_name as(
+-- select from base_table),
+-- cte_name2 as(
+-- select from second_base_table)
+-- final_as(select from base_table1 join base_table2)
+
+-- select * from final
+        );
+[0m18:39:06.379090 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:39:07.939124 [debug] [Thread-2 (]: Snowflake adapter: Snowflake query id: 01b57de3-0000-f480-0000-0001bc7a3589
+[0m18:39:07.939924 [debug] [Thread-2 (]: Snowflake adapter: Snowflake error: 000904 (42000): SQL compilation error: error line 24 at position 3
+invalid identifier 'CS.CUSTOMER_ID'
+[0m18:39:07.940775 [debug] [Thread-2 (]: On model.dvdrental_analytics.top_loyal_customers: Close
+[0m18:39:08.254058 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 2.0 seconds
+[0m18:39:08.295181 [debug] [Thread-1 (]: On model.dvdrental_analytics.active_customers: Close
+[0m18:39:08.460871 [debug] [Thread-2 (]: Database Error in model top_loyal_customers (models/finance/top_loyal_customers.sql)
+  000904 (42000): SQL compilation error: error line 24 at position 3
+  invalid identifier 'CS.CUSTOMER_ID'
+  compiled Code at target/run/dvdrental_analytics/models/finance/top_loyal_customers.sql
+[0m18:39:08.463243 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e964839f-d56f-4b91-afd8-209e677cd0a4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10753a990>]}
+[0m18:39:08.464606 [error] [Thread-2 (]: 2 of 2 ERROR creating sql table model public.top_loyal_customers ............... [[31mERROR[0m in 2.29s]
+[0m18:39:08.465799 [debug] [Thread-2 (]: Finished running node model.dvdrental_analytics.top_loyal_customers
+[0m18:39:08.842440 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e964839f-d56f-4b91-afd8-209e677cd0a4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1050d47d0>]}
+[0m18:39:08.843600 [info ] [Thread-1 (]: 1 of 2 OK created sql table model public.active_customers ...................... [[32mSUCCESS 1[0m in 2.68s]
+[0m18:39:08.844751 [debug] [Thread-1 (]: Finished running node model.dvdrental_analytics.active_customers
+[0m18:39:08.847415 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m18:39:08.848348 [debug] [MainThread]: Connection 'model.dvdrental_analytics.active_customers' was properly closed.
+[0m18:39:08.848976 [debug] [MainThread]: Connection 'model.dvdrental_analytics.top_loyal_customers' was properly closed.
+[0m18:39:08.849853 [info ] [MainThread]: 
+[0m18:39:08.850592 [info ] [MainThread]: Finished running 2 table models in 0 hours 0 minutes and 7.64 seconds (7.64s).
+[0m18:39:08.852568 [debug] [MainThread]: Command end result
+[0m18:39:08.931233 [info ] [MainThread]: 
+[0m18:39:08.932423 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m18:39:08.933613 [info ] [MainThread]: 
+[0m18:39:08.934854 [error] [MainThread]:   Database Error in model top_loyal_customers (models/finance/top_loyal_customers.sql)
+  000904 (42000): SQL compilation error: error line 24 at position 3
+  invalid identifier 'CS.CUSTOMER_ID'
+  compiled Code at target/run/dvdrental_analytics/models/finance/top_loyal_customers.sql
+[0m18:39:08.937252 [info ] [MainThread]: 
+[0m18:39:08.944335 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=1 SKIP=0 TOTAL=2
+[0m18:39:08.955536 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 9.83783, "process_user_time": 4.529291, "process_kernel_time": 0.877775, "process_mem_max_rss": "133881856", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m18:39:08.956620 [debug] [MainThread]: Command `dbt run` failed at 18:39:08.956427 after 9.84 seconds
+[0m18:39:08.959461 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1019a5fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103b5ba10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x101a41310>]}
+[0m18:39:08.960508 [debug] [MainThread]: Flushing usage events
+[0m18:39:48.942141 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1044da090>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1044d8510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104537650>]}
+
+
+============================== 18:39:48.953293 | 12bbbe36-e2f0-432b-975e-b07993a95735 ==============================
+[0m18:39:48.953293 [info ] [MainThread]: Running with dbt=1.8.3
+[0m18:39:48.954588 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/omejevwe/.dbt', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': '/Users/omejevwe/Documents/DBT/dvdrental-analytics/logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt run', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m18:39:50.049210 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '12bbbe36-e2f0-432b-975e-b07993a95735', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104f0d290>]}
+[0m18:39:50.145225 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '12bbbe36-e2f0-432b-975e-b07993a95735', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103f8d690>]}
+[0m18:39:50.147094 [info ] [MainThread]: Registered adapter: snowflake=1.8.3
+[0m18:39:50.190442 [debug] [MainThread]: checksum: 30bd4080c2bc8dee5936f8f60083ffbe1c906859d0fd965607c2144031479456, vars: {}, profile: , target: , version: 1.8.3
+[0m18:39:50.486059 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m18:39:50.487260 [debug] [MainThread]: Partial parsing: updated file: dvdrental_analytics://models/finance/top_loyal_customers.sql
+[0m18:39:51.003155 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '12bbbe36-e2f0-432b-975e-b07993a95735', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1055495d0>]}
+[0m18:39:51.195936 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '12bbbe36-e2f0-432b-975e-b07993a95735', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104cac0d0>]}
+[0m18:39:51.196974 [info ] [MainThread]: Found 2 models, 16 data tests, 8 sources, 446 macros
+[0m18:39:51.198209 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '12bbbe36-e2f0-432b-975e-b07993a95735', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105466c90>]}
+[0m18:39:51.203457 [info ] [MainThread]: 
+[0m18:39:51.204650 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m18:39:51.212684 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_dev'
+[0m18:39:51.243334 [debug] [ThreadPool]: Using snowflake connection "list_dev"
+[0m18:39:51.244047 [debug] [ThreadPool]: On list_dev: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "dvdrental_analytics", "target_name": "dev", "connection_name": "list_dev"} */
+show terse schemas in database dev
+    limit 10000
+[0m18:39:51.244588 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:39:53.086295 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 2.0 seconds
+[0m18:39:53.089837 [debug] [ThreadPool]: On list_dev: Close
+[0m18:39:53.576782 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dev, now list_dev_public)
+[0m18:39:53.592771 [debug] [ThreadPool]: Using snowflake connection "list_dev_public"
+[0m18:39:53.594344 [debug] [ThreadPool]: On list_dev_public: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "dvdrental_analytics", "target_name": "dev", "connection_name": "list_dev_public"} */
+show objects in dev.public limit 10000
+[0m18:39:53.595815 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m18:39:55.260384 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 2.0 seconds
+[0m18:39:55.264232 [debug] [ThreadPool]: On list_dev_public: Close
+[0m18:39:55.786868 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '12bbbe36-e2f0-432b-975e-b07993a95735', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105026850>]}
+[0m18:39:55.788295 [info ] [MainThread]: Concurrency: 5 threads (target='dev')
+[0m18:39:55.789390 [info ] [MainThread]: 
+[0m18:39:55.794959 [debug] [Thread-1 (]: Began running node model.dvdrental_analytics.active_customers
+[0m18:39:55.795762 [debug] [Thread-2 (]: Began running node model.dvdrental_analytics.top_loyal_customers
+[0m18:39:55.797092 [info ] [Thread-1 (]: 1 of 2 START sql table model public.active_customers ........................... [RUN]
+[0m18:39:55.798550 [info ] [Thread-2 (]: 2 of 2 START sql table model public.top_loyal_customers ........................ [RUN]
+[0m18:39:55.800660 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_dev_public, now model.dvdrental_analytics.active_customers)
+[0m18:39:55.802070 [debug] [Thread-2 (]: Acquiring new snowflake connection 'model.dvdrental_analytics.top_loyal_customers'
+[0m18:39:55.803208 [debug] [Thread-1 (]: Began compiling node model.dvdrental_analytics.active_customers
+[0m18:39:55.804532 [debug] [Thread-2 (]: Began compiling node model.dvdrental_analytics.top_loyal_customers
+[0m18:39:55.828245 [debug] [Thread-1 (]: Writing injected SQL for node "model.dvdrental_analytics.active_customers"
+[0m18:39:55.829554 [debug] [Thread-2 (]: Writing injected SQL for node "model.dvdrental_analytics.top_loyal_customers"
+[0m18:39:55.831724 [debug] [Thread-2 (]: Began executing node model.dvdrental_analytics.top_loyal_customers
+[0m18:39:55.840492 [debug] [Thread-1 (]: Began executing node model.dvdrental_analytics.active_customers
+[0m18:39:56.016176 [debug] [Thread-2 (]: Writing runtime sql for node "model.dvdrental_analytics.top_loyal_customers"
+[0m18:39:56.019542 [debug] [Thread-2 (]: Using snowflake connection "model.dvdrental_analytics.top_loyal_customers"
+[0m18:39:56.020549 [debug] [Thread-2 (]: On model.dvdrental_analytics.top_loyal_customers: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "dvdrental_analytics", "target_name": "dev", "node_id": "model.dvdrental_analytics.top_loyal_customers"} */
+create or replace transient table dev.public.top_loyal_customers
+         as
+        (with customers_info as (
+SELECT first_name ||' '|| last_name AS full_name, 
+    address_id,
+    customer_id,
+    email
+from dvdrentals.public.customer
+),
+final as(
+    Select full_name,
+     address, 
+     phone, 
+     city, 
+     country, 
+     sum(amount) AS total_purchase
+FROM customers_info cs
+JOIN dvdrentals.public.address ad
+ON cs.address_id = ad.address_id
+JOIN dvdrentals.public.city ct
+ON ad.city_id = ct.city_id
+JOIN dvdrentals.public.country cy
+ON ct.country_id = cy.country_id
+JOIN dvdrentals.public.payment pm
+ON cs.customer_id = pm.customer_id
+GROUP BY 1, 2, 3, 4, 5, 6
+ORDER BY 7 DESC
+LIMIT 10
+)
+
+select * from final
+        );
+[0m18:39:56.024462 [debug] [Thread-1 (]: Writing runtime sql for node "model.dvdrental_analytics.active_customers"
+[0m18:39:56.025308 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m18:39:56.030455 [debug] [Thread-1 (]: Using snowflake connection "model.dvdrental_analytics.active_customers"
+[0m18:39:56.031505 [debug] [Thread-1 (]: On model.dvdrental_analytics.active_customers: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "dvdrental_analytics", "target_name": "dev", "node_id": "model.dvdrental_analytics.active_customers"} */
+create or replace transient table dev.public.active_customers
+         as
+        (with customer as  (
+    select first_name,
+    last_name,
+    email,
+    active
+    
+    from dvdrentals.public.customer
+),
+final as (
+    select * from customer
+    where active = 1
+)
+select * from final
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- with cte_name as(
+-- select from base_table),
+-- cte_name2 as(
+-- select from second_base_table)
+-- final_as(select from base_table1 join base_table2)
+
+-- select * from final
+        );
+[0m18:39:56.032310 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:39:57.631511 [debug] [Thread-2 (]: Snowflake adapter: Snowflake query id: 01b57de3-0000-f4b0-0000-0001bc7a242d
+[0m18:39:57.632352 [debug] [Thread-2 (]: Snowflake adapter: Snowflake error: 002024 (42601): SQL compilation error:
+[7] is not a valid order by expression
+[0m18:39:57.633415 [debug] [Thread-2 (]: On model.dvdrental_analytics.top_loyal_customers: Close
+[0m18:39:58.149614 [debug] [Thread-2 (]: Database Error in model top_loyal_customers (models/finance/top_loyal_customers.sql)
+  002024 (42601): SQL compilation error:
+  [7] is not a valid order by expression
+  compiled Code at target/run/dvdrental_analytics/models/finance/top_loyal_customers.sql
+[0m18:39:58.152613 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '12bbbe36-e2f0-432b-975e-b07993a95735', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x102a03cd0>]}
+[0m18:39:58.153851 [error] [Thread-2 (]: 2 of 2 ERROR creating sql table model public.top_loyal_customers ............... [[31mERROR[0m in 2.35s]
+[0m18:39:58.155012 [debug] [Thread-2 (]: Finished running node model.dvdrental_analytics.top_loyal_customers
+[0m18:39:58.230794 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 2.0 seconds
+[0m18:39:58.271948 [debug] [Thread-1 (]: On model.dvdrental_analytics.active_customers: Close
+[0m18:39:58.850948 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '12bbbe36-e2f0-432b-975e-b07993a95735', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1059d7dd0>]}
+[0m18:39:58.852495 [info ] [Thread-1 (]: 1 of 2 OK created sql table model public.active_customers ...................... [[32mSUCCESS 1[0m in 3.05s]
+[0m18:39:58.854058 [debug] [Thread-1 (]: Finished running node model.dvdrental_analytics.active_customers
+[0m18:39:58.857030 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m18:39:58.857886 [debug] [MainThread]: Connection 'model.dvdrental_analytics.active_customers' was properly closed.
+[0m18:39:58.858701 [debug] [MainThread]: Connection 'model.dvdrental_analytics.top_loyal_customers' was properly closed.
+[0m18:39:58.859909 [info ] [MainThread]: 
+[0m18:39:58.860823 [info ] [MainThread]: Finished running 2 table models in 0 hours 0 minutes and 7.66 seconds (7.66s).
+[0m18:39:58.862381 [debug] [MainThread]: Command end result
+[0m18:39:58.924878 [info ] [MainThread]: 
+[0m18:39:58.925684 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m18:39:58.926895 [info ] [MainThread]: 
+[0m18:39:58.928668 [error] [MainThread]:   Database Error in model top_loyal_customers (models/finance/top_loyal_customers.sql)
+  002024 (42601): SQL compilation error:
+  [7] is not a valid order by expression
+  compiled Code at target/run/dvdrental_analytics/models/finance/top_loyal_customers.sql
+[0m18:39:58.930506 [info ] [MainThread]: 
+[0m18:39:58.931215 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=1 SKIP=0 TOTAL=2
+[0m18:39:58.946904 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 10.133567, "process_user_time": 4.455677, "process_kernel_time": 0.858048, "process_mem_max_rss": "133496832", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m18:39:58.948299 [debug] [MainThread]: Command `dbt run` failed at 18:39:58.947936 after 10.14 seconds
+[0m18:39:58.950119 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10451fdd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10085de50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104536f10>]}
+[0m18:39:58.951059 [debug] [MainThread]: Flushing usage events
+[0m18:41:37.945924 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10479bcd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1047baa90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1047bb110>]}
+
+
+============================== 18:41:37.958748 | d5bbafb2-83e5-45d8-bd78-3dab4558447f ==============================
+[0m18:41:37.958748 [info ] [MainThread]: Running with dbt=1.8.3
+[0m18:41:37.959628 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': '/Users/omejevwe/Documents/DBT/dvdrental-analytics/logs', 'version_check': 'True', 'profiles_dir': '/Users/omejevwe/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m18:41:38.501901 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'd5bbafb2-83e5-45d8-bd78-3dab4558447f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10477e710>]}
+[0m18:41:38.566828 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'd5bbafb2-83e5-45d8-bd78-3dab4558447f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1042155d0>]}
+[0m18:41:38.568517 [info ] [MainThread]: Registered adapter: snowflake=1.8.3
+[0m18:41:38.595407 [debug] [MainThread]: checksum: 30bd4080c2bc8dee5936f8f60083ffbe1c906859d0fd965607c2144031479456, vars: {}, profile: , target: , version: 1.8.3
+[0m18:41:38.795215 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m18:41:38.811779 [debug] [MainThread]: Partial parsing: updated file: dvdrental_analytics://models/finance/top_loyal_customers.sql
+[0m18:41:39.235893 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'd5bbafb2-83e5-45d8-bd78-3dab4558447f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105651e90>]}
+[0m18:41:39.373916 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'd5bbafb2-83e5-45d8-bd78-3dab4558447f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x102f5c090>]}
+[0m18:41:39.374522 [info ] [MainThread]: Found 2 models, 16 data tests, 8 sources, 446 macros
+[0m18:41:39.374911 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd5bbafb2-83e5-45d8-bd78-3dab4558447f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1058877d0>]}
+[0m18:41:39.377071 [info ] [MainThread]: 
+[0m18:41:39.377686 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m18:41:39.382654 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_dev'
+[0m18:41:39.401678 [debug] [ThreadPool]: Using snowflake connection "list_dev"
+[0m18:41:39.402151 [debug] [ThreadPool]: On list_dev: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "dvdrental_analytics", "target_name": "dev", "connection_name": "list_dev"} */
+show terse schemas in database dev
+    limit 10000
+[0m18:41:39.402480 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:41:41.278970 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 2.0 seconds
+[0m18:41:41.281694 [debug] [ThreadPool]: On list_dev: Close
+[0m18:41:41.765264 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dev, now list_dev_public)
+[0m18:41:41.779435 [debug] [ThreadPool]: Using snowflake connection "list_dev_public"
+[0m18:41:41.780061 [debug] [ThreadPool]: On list_dev_public: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "dvdrental_analytics", "target_name": "dev", "connection_name": "list_dev_public"} */
+show objects in dev.public limit 10000
+[0m18:41:41.780654 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m18:41:43.451393 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 2.0 seconds
+[0m18:41:43.453818 [debug] [ThreadPool]: On list_dev_public: Close
+[0m18:41:44.009273 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd5bbafb2-83e5-45d8-bd78-3dab4558447f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105668410>]}
+[0m18:41:44.010282 [info ] [MainThread]: Concurrency: 5 threads (target='dev')
+[0m18:41:44.010818 [info ] [MainThread]: 
+[0m18:41:44.014160 [debug] [Thread-1 (]: Began running node model.dvdrental_analytics.active_customers
+[0m18:41:44.015436 [debug] [Thread-2 (]: Began running node model.dvdrental_analytics.top_loyal_customers
+[0m18:41:44.014961 [info ] [Thread-1 (]: 1 of 2 START sql table model public.active_customers ........................... [RUN]
+[0m18:41:44.016391 [info ] [Thread-2 (]: 2 of 2 START sql table model public.top_loyal_customers ........................ [RUN]
+[0m18:41:44.017302 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_dev_public, now model.dvdrental_analytics.active_customers)
+[0m18:41:44.018093 [debug] [Thread-2 (]: Acquiring new snowflake connection 'model.dvdrental_analytics.top_loyal_customers'
+[0m18:41:44.018626 [debug] [Thread-1 (]: Began compiling node model.dvdrental_analytics.active_customers
+[0m18:41:44.019165 [debug] [Thread-2 (]: Began compiling node model.dvdrental_analytics.top_loyal_customers
+[0m18:41:44.029343 [debug] [Thread-1 (]: Writing injected SQL for node "model.dvdrental_analytics.active_customers"
+[0m18:41:44.033019 [debug] [Thread-2 (]: Writing injected SQL for node "model.dvdrental_analytics.top_loyal_customers"
+[0m18:41:44.033823 [debug] [Thread-1 (]: Began executing node model.dvdrental_analytics.active_customers
+[0m18:41:44.034191 [debug] [Thread-2 (]: Began executing node model.dvdrental_analytics.top_loyal_customers
+[0m18:41:44.093476 [debug] [Thread-2 (]: Writing runtime sql for node "model.dvdrental_analytics.top_loyal_customers"
+[0m18:41:44.094384 [debug] [Thread-1 (]: Writing runtime sql for node "model.dvdrental_analytics.active_customers"
+[0m18:41:44.096136 [debug] [Thread-2 (]: Using snowflake connection "model.dvdrental_analytics.top_loyal_customers"
+[0m18:41:44.096644 [debug] [Thread-2 (]: On model.dvdrental_analytics.top_loyal_customers: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "dvdrental_analytics", "target_name": "dev", "node_id": "model.dvdrental_analytics.top_loyal_customers"} */
+create or replace transient table dev.public.top_loyal_customers
+         as
+        (with customers_info as (
+SELECT first_name ||' '|| last_name AS full_name, 
+    address_id,
+    customer_id,
+    email
+from dvdrentals.public.customer
+),
+final as(
+    Select full_name,
+     address, 
+     phone, 
+     city, 
+     country, 
+     sum(amount) AS total_purchase
+FROM customers_info cs
+JOIN dvdrentals.public.address ad
+ON cs.address_id = ad.address_id
+JOIN dvdrentals.public.city ct
+ON ad.city_id = ct.city_id
+JOIN dvdrentals.public.country cy
+ON ct.country_id = cy.country_id
+JOIN dvdrentals.public.payment pm
+ON cs.customer_id = pm.customer_id
+GROUP BY 1, 2, 3, 4, 5
+ORDER BY 6 DESC
+LIMIT 10
+)
+
+select * from final
+        );
+[0m18:41:44.097410 [debug] [Thread-1 (]: Using snowflake connection "model.dvdrental_analytics.active_customers"
+[0m18:41:44.097799 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m18:41:44.098295 [debug] [Thread-1 (]: On model.dvdrental_analytics.active_customers: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "dvdrental_analytics", "target_name": "dev", "node_id": "model.dvdrental_analytics.active_customers"} */
+create or replace transient table dev.public.active_customers
+         as
+        (with customer as  (
+    select first_name,
+    last_name,
+    email,
+    active
+    
+    from dvdrentals.public.customer
+),
+final as (
+    select * from customer
+    where active = 1
+)
+select * from final
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- with cte_name as(
+-- select from base_table),
+-- cte_name2 as(
+-- select from second_base_table)
+-- final_as(select from base_table1 join base_table2)
+
+-- select * from final
+        );
+[0m18:41:44.099114 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:41:46.847014 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 3.0 seconds
+[0m18:41:46.842420 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 3.0 seconds
+[0m18:41:46.941556 [debug] [Thread-1 (]: On model.dvdrental_analytics.active_customers: Close
+[0m18:41:46.942117 [debug] [Thread-2 (]: On model.dvdrental_analytics.top_loyal_customers: Close
+[0m18:41:47.468741 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd5bbafb2-83e5-45d8-bd78-3dab4558447f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105a29390>]}
+[0m18:41:47.469437 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd5bbafb2-83e5-45d8-bd78-3dab4558447f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1066987d0>]}
+[0m18:41:47.470675 [info ] [Thread-1 (]: 1 of 2 OK created sql table model public.active_customers ...................... [[32mSUCCESS 1[0m in 3.45s]
+[0m18:41:47.471496 [info ] [Thread-2 (]: 2 of 2 OK created sql table model public.top_loyal_customers ................... [[32mSUCCESS 1[0m in 3.45s]
+[0m18:41:47.472477 [debug] [Thread-1 (]: Finished running node model.dvdrental_analytics.active_customers
+[0m18:41:47.473090 [debug] [Thread-2 (]: Finished running node model.dvdrental_analytics.top_loyal_customers
+[0m18:41:47.476944 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m18:41:47.477359 [debug] [MainThread]: Connection 'model.dvdrental_analytics.active_customers' was properly closed.
+[0m18:41:47.477903 [debug] [MainThread]: Connection 'model.dvdrental_analytics.top_loyal_customers' was properly closed.
+[0m18:41:47.478462 [info ] [MainThread]: 
+[0m18:41:47.478921 [info ] [MainThread]: Finished running 2 table models in 0 hours 0 minutes and 8.10 seconds (8.10s).
+[0m18:41:47.480790 [debug] [MainThread]: Command end result
+[0m18:41:47.523994 [info ] [MainThread]: 
+[0m18:41:47.524674 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m18:41:47.525052 [info ] [MainThread]: 
+[0m18:41:47.525464 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[0m18:41:47.528632 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 9.689422, "process_user_time": 2.781636, "process_kernel_time": 0.620207, "process_mem_max_rss": "132292608", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m18:41:47.529634 [debug] [MainThread]: Command `dbt run` succeeded at 18:41:47.529467 after 9.69 seconds
+[0m18:41:47.530251 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1047bb050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x100ae9e90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x100c2d490>]}
+[0m18:41:47.530820 [debug] [MainThread]: Flushing usage events
+[0m15:33:27.385632 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105e1e650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105e17fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105e7ae90>]}
+
+
+============================== 15:33:27.395239 | f159bfd1-4d74-47b1-8d55-516483da27f6 ==============================
+[0m15:33:27.395239 [info ] [MainThread]: Running with dbt=1.8.3
+[0m15:33:27.395981 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/omejevwe/.dbt', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/Users/omejevwe/Documents/DBT/dvdrental-analytics/logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'invocation_command': 'dbt run', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m15:33:28.445496 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'f159bfd1-4d74-47b1-8d55-516483da27f6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106d332d0>]}
+[0m15:33:28.494696 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'f159bfd1-4d74-47b1-8d55-516483da27f6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1058cd790>]}
+[0m15:33:28.497476 [info ] [MainThread]: Registered adapter: snowflake=1.8.3
+[0m15:33:28.520655 [debug] [MainThread]: checksum: 30bd4080c2bc8dee5936f8f60083ffbe1c906859d0fd965607c2144031479456, vars: {}, profile: , target: , version: 1.8.3
+[0m15:33:28.689095 [debug] [MainThread]: Partial parsing enabled: 1 files deleted, 2 files added, 0 files changed.
+[0m15:33:28.689926 [debug] [MainThread]: Partial parsing: added file: dvdrental_analytics://models/finance/active_customers_stg.sql
+[0m15:33:28.690279 [debug] [MainThread]: Partial parsing: added file: dvdrental_analytics://models/finance/active_us_customers.sql
+[0m15:33:28.690579 [debug] [MainThread]: Partial parsing: deleted file: dvdrental_analytics://models/finance/active_customers.sql
+[0m15:33:28.995578 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'f159bfd1-4d74-47b1-8d55-516483da27f6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106f5da50>]}
+[0m15:33:29.120101 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'f159bfd1-4d74-47b1-8d55-516483da27f6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106f43cd0>]}
+[0m15:33:29.120716 [info ] [MainThread]: Found 16 data tests, 3 models, 8 sources, 446 macros
+[0m15:33:29.121088 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f159bfd1-4d74-47b1-8d55-516483da27f6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106e31710>]}
+[0m15:33:29.123172 [info ] [MainThread]: 
+[0m15:33:29.123869 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m15:33:29.129179 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_dev'
+[0m15:33:29.143332 [debug] [ThreadPool]: Using snowflake connection "list_dev"
+[0m15:33:29.143919 [debug] [ThreadPool]: On list_dev: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "dvdrental_analytics", "target_name": "dev", "connection_name": "list_dev"} */
+show terse schemas in database dev
+    limit 10000
+[0m15:33:29.144320 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:33:33.472197 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 4.0 seconds
+[0m15:33:33.475788 [debug] [ThreadPool]: On list_dev: Close
+[0m15:33:34.066554 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dev, now list_dev_public)
+[0m15:33:34.082283 [debug] [ThreadPool]: Using snowflake connection "list_dev_public"
+[0m15:33:34.082970 [debug] [ThreadPool]: On list_dev_public: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "dvdrental_analytics", "target_name": "dev", "connection_name": "list_dev_public"} */
+show objects in dev.public limit 10000
+[0m15:33:34.083388 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m15:33:35.888226 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 2.0 seconds
+[0m15:33:35.891798 [debug] [ThreadPool]: On list_dev_public: Close
+[0m15:33:36.431037 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f159bfd1-4d74-47b1-8d55-516483da27f6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1072b5d90>]}
+[0m15:33:36.432439 [info ] [MainThread]: Concurrency: 5 threads (target='dev')
+[0m15:33:36.433208 [info ] [MainThread]: 
+[0m15:33:36.441212 [debug] [Thread-1 (]: Began running node model.dvdrental_analytics.active_customers_stg
+[0m15:33:36.442154 [debug] [Thread-2 (]: Began running node model.dvdrental_analytics.top_loyal_customers
+[0m15:33:36.443020 [info ] [Thread-1 (]: 1 of 3 START sql table model public.active_customers_stg ....................... [RUN]
+[0m15:33:36.444430 [info ] [Thread-2 (]: 2 of 3 START sql table model public.top_loyal_customers ........................ [RUN]
+[0m15:33:36.448896 [debug] [Thread-2 (]: Acquiring new snowflake connection 'model.dvdrental_analytics.top_loyal_customers'
+[0m15:33:36.449614 [debug] [Thread-2 (]: Began compiling node model.dvdrental_analytics.top_loyal_customers
+[0m15:33:36.445364 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_dev_public, now model.dvdrental_analytics.active_customers_stg)
+[0m15:33:36.460289 [debug] [Thread-1 (]: Began compiling node model.dvdrental_analytics.active_customers_stg
+[0m15:33:36.465965 [debug] [Thread-1 (]: Writing injected SQL for node "model.dvdrental_analytics.active_customers_stg"
+[0m15:33:36.468883 [debug] [Thread-2 (]: Writing injected SQL for node "model.dvdrental_analytics.top_loyal_customers"
+[0m15:33:36.469955 [debug] [Thread-1 (]: Began executing node model.dvdrental_analytics.active_customers_stg
+[0m15:33:36.491069 [debug] [Thread-2 (]: Began executing node model.dvdrental_analytics.top_loyal_customers
+[0m15:33:36.500721 [debug] [Thread-1 (]: Writing runtime sql for node "model.dvdrental_analytics.active_customers_stg"
+[0m15:33:36.504304 [debug] [Thread-2 (]: Writing runtime sql for node "model.dvdrental_analytics.top_loyal_customers"
+[0m15:33:36.505812 [debug] [Thread-1 (]: Using snowflake connection "model.dvdrental_analytics.active_customers_stg"
+[0m15:33:36.506455 [debug] [Thread-1 (]: On model.dvdrental_analytics.active_customers_stg: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "dvdrental_analytics", "target_name": "dev", "node_id": "model.dvdrental_analytics.active_customers_stg"} */
+create or replace transient table dev.public.active_customers_stg
+         as
+        (with customer as  (
+    select first_name,
+    last_name,
+    email,
+    active,
+    address_id
+    
+    from dvdrentals.public.customer
+),
+final as (
+    select * from customer
+    where active = 1
+)
+select * from final
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- with cte_name as(
+-- select from base_table),
+-- cte_name2 as(
+-- select from second_base_table)
+-- final_as(select from base_table1 join base_table2)
+
+-- select * from final
+        );
+[0m15:33:36.507625 [debug] [Thread-2 (]: Using snowflake connection "model.dvdrental_analytics.top_loyal_customers"
+[0m15:33:36.507955 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:33:36.508335 [debug] [Thread-2 (]: On model.dvdrental_analytics.top_loyal_customers: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "dvdrental_analytics", "target_name": "dev", "node_id": "model.dvdrental_analytics.top_loyal_customers"} */
+create or replace transient table dev.public.top_loyal_customers
+         as
+        (with customers_info as (
+SELECT first_name ||' '|| last_name AS full_name, 
+    address_id,
+    customer_id,
+    email
+from dvdrentals.public.customer
+),
+final as(
+    Select full_name,
+     address, 
+     phone, 
+     city, 
+     country, 
+     sum(amount) AS total_purchase
+FROM customers_info cs
+JOIN dvdrentals.public.address ad
+ON cs.address_id = ad.address_id
+JOIN dvdrentals.public.city ct
+ON ad.city_id = ct.city_id
+JOIN dvdrentals.public.country cy
+ON ct.country_id = cy.country_id
+JOIN dvdrentals.public.payment pm
+ON cs.customer_id = pm.customer_id
+GROUP BY 1, 2, 3, 4, 5
+ORDER BY 6 DESC
+LIMIT 10
+)
+
+select * from final
+        );
+[0m15:33:36.509985 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m15:33:39.201543 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 3.0 seconds
+[0m15:33:39.238444 [debug] [Thread-1 (]: On model.dvdrental_analytics.active_customers_stg: Close
+[0m15:33:39.421313 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 3.0 seconds
+[0m15:33:39.432459 [debug] [Thread-2 (]: On model.dvdrental_analytics.top_loyal_customers: Close
+[0m15:33:39.887946 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f159bfd1-4d74-47b1-8d55-516483da27f6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106d06090>]}
+[0m15:33:39.889852 [info ] [Thread-1 (]: 1 of 3 OK created sql table model public.active_customers_stg .................. [[32mSUCCESS 1[0m in 3.44s]
+[0m15:33:39.891038 [debug] [Thread-1 (]: Finished running node model.dvdrental_analytics.active_customers_stg
+[0m15:33:39.892112 [debug] [Thread-4 (]: Began running node model.dvdrental_analytics.active_us_customers
+[0m15:33:39.892922 [info ] [Thread-4 (]: 3 of 3 START sql table model public.active_us_customers ........................ [RUN]
+[0m15:33:39.894008 [debug] [Thread-4 (]: Acquiring new snowflake connection 'model.dvdrental_analytics.active_us_customers'
+[0m15:33:39.894692 [debug] [Thread-4 (]: Began compiling node model.dvdrental_analytics.active_us_customers
+[0m15:33:39.900255 [debug] [Thread-4 (]: Writing injected SQL for node "model.dvdrental_analytics.active_us_customers"
+[0m15:33:39.901498 [debug] [Thread-4 (]: Began executing node model.dvdrental_analytics.active_us_customers
+[0m15:33:39.905985 [debug] [Thread-4 (]: Writing runtime sql for node "model.dvdrental_analytics.active_us_customers"
+[0m15:33:39.908427 [debug] [Thread-4 (]: Using snowflake connection "model.dvdrental_analytics.active_us_customers"
+[0m15:33:39.909259 [debug] [Thread-4 (]: On model.dvdrental_analytics.active_us_customers: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "dvdrental_analytics", "target_name": "dev", "node_id": "model.dvdrental_analytics.active_us_customers"} */
+create or replace transient table dev.public.active_us_customers
+         as
+        (with active_customers as (
+    select * from dev.public.active_customers_stg
+),
+final as (
+    select * from active_customers
+    join dvdrentals.public.address
+    join dvdrentals.public.address
+)
+        );
+[0m15:33:39.909865 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m15:33:40.150304 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f159bfd1-4d74-47b1-8d55-516483da27f6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107d1b550>]}
+[0m15:33:40.151548 [info ] [Thread-2 (]: 2 of 3 OK created sql table model public.top_loyal_customers ................... [[32mSUCCESS 1[0m in 3.70s]
+[0m15:33:40.152793 [debug] [Thread-2 (]: Finished running node model.dvdrental_analytics.top_loyal_customers
+[0m15:33:41.565893 [debug] [Thread-4 (]: Snowflake adapter: Snowflake query id: 01b5a489-0000-fa59-0000-0001bc7a70ed
+[0m15:33:41.566846 [debug] [Thread-4 (]: Snowflake adapter: Snowflake error: 001003 (42000): SQL compilation error:
+syntax error line 11 at position 8 unexpected ')'.
+[0m15:33:41.567706 [debug] [Thread-4 (]: On model.dvdrental_analytics.active_us_customers: Close
+[0m15:33:42.110340 [debug] [Thread-4 (]: Database Error in model active_us_customers (models/finance/active_us_customers.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 11 at position 8 unexpected ')'.
+  compiled Code at target/run/dvdrental_analytics/models/finance/active_us_customers.sql
+[0m15:33:42.111370 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f159bfd1-4d74-47b1-8d55-516483da27f6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1072d9a10>]}
+[0m15:33:42.112443 [error] [Thread-4 (]: 3 of 3 ERROR creating sql table model public.active_us_customers ............... [[31mERROR[0m in 2.22s]
+[0m15:33:42.113501 [debug] [Thread-4 (]: Finished running node model.dvdrental_analytics.active_us_customers
+[0m15:33:42.117210 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m15:33:42.117865 [debug] [MainThread]: Connection 'model.dvdrental_analytics.active_customers_stg' was properly closed.
+[0m15:33:42.118363 [debug] [MainThread]: Connection 'model.dvdrental_analytics.top_loyal_customers' was properly closed.
+[0m15:33:42.118820 [debug] [MainThread]: Connection 'model.dvdrental_analytics.active_us_customers' was properly closed.
+[0m15:33:42.119416 [info ] [MainThread]: 
+[0m15:33:42.120039 [info ] [MainThread]: Finished running 3 table models in 0 hours 0 minutes and 13.00 seconds (13.00s).
+[0m15:33:42.121690 [debug] [MainThread]: Command end result
+[0m15:33:42.160981 [info ] [MainThread]: 
+[0m15:33:42.161533 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m15:33:42.161957 [info ] [MainThread]: 
+[0m15:33:42.162555 [error] [MainThread]:   Database Error in model active_us_customers (models/finance/active_us_customers.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 11 at position 8 unexpected ')'.
+  compiled Code at target/run/dvdrental_analytics/models/finance/active_us_customers.sql
+[0m15:33:42.163003 [info ] [MainThread]: 
+[0m15:33:42.163433 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=1 SKIP=0 TOTAL=3
+[0m15:33:42.171322 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 14.907714, "process_user_time": 2.94018, "process_kernel_time": 0.719682, "process_mem_max_rss": "134144000", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m15:33:42.172249 [debug] [MainThread]: Command `dbt run` failed at 15:33:42.172110 after 14.91 seconds
+[0m15:33:42.172734 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105e161d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1021a9e90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10705fb10>]}
+[0m15:33:42.173620 [debug] [MainThread]: Flushing usage events
+[0m15:37:07.791408 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113bc0610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113c01ed0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113c028d0>]}
+
+
+============================== 15:37:07.800052 | ff559b24-1d6c-494e-8bff-ed6b87c7b626 ==============================
+[0m15:37:07.800052 [info ] [MainThread]: Running with dbt=1.8.3
+[0m15:37:07.800913 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/Users/omejevwe/Documents/DBT/dvdrental-analytics/logs', 'version_check': 'True', 'profiles_dir': '/Users/omejevwe/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'invocation_command': 'dbt run -s active_customers_stg', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m15:37:08.330255 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'ff559b24-1d6c-494e-8bff-ed6b87c7b626', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x114af3450>]}
+[0m15:37:08.379983 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'ff559b24-1d6c-494e-8bff-ed6b87c7b626', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113675610>]}
+[0m15:37:08.382085 [info ] [MainThread]: Registered adapter: snowflake=1.8.3
+[0m15:37:08.406976 [debug] [MainThread]: checksum: 30bd4080c2bc8dee5936f8f60083ffbe1c906859d0fd965607c2144031479456, vars: {}, profile: , target: , version: 1.8.3
+[0m15:37:08.577822 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m15:37:08.578556 [debug] [MainThread]: Partial parsing: updated file: dvdrental_analytics://models/finance/active_customers_stg.sql
+[0m15:37:08.878814 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'ff559b24-1d6c-494e-8bff-ed6b87c7b626', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x114791e10>]}
+[0m15:37:08.995754 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'ff559b24-1d6c-494e-8bff-ed6b87c7b626', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x114c09050>]}
+[0m15:37:08.996512 [info ] [MainThread]: Found 16 data tests, 3 models, 8 sources, 446 macros
+[0m15:37:08.996951 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ff559b24-1d6c-494e-8bff-ed6b87c7b626', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x114e58c50>]}
+[0m15:37:08.998740 [info ] [MainThread]: 
+[0m15:37:08.999490 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m15:37:09.000614 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_dev'
+[0m15:37:09.016103 [debug] [ThreadPool]: Using snowflake connection "list_dev"
+[0m15:37:09.016644 [debug] [ThreadPool]: On list_dev: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "dvdrental_analytics", "target_name": "dev", "connection_name": "list_dev"} */
+show terse schemas in database dev
+    limit 10000
+[0m15:37:09.017034 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:37:10.780653 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 2.0 seconds
+[0m15:37:10.783167 [debug] [ThreadPool]: On list_dev: Close
+[0m15:37:11.274502 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dev, now list_dev_public)
+[0m15:37:11.288176 [debug] [ThreadPool]: Using snowflake connection "list_dev_public"
+[0m15:37:11.288761 [debug] [ThreadPool]: On list_dev_public: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "dvdrental_analytics", "target_name": "dev", "connection_name": "list_dev_public"} */
+show objects in dev.public limit 10000
+[0m15:37:11.289176 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m15:37:12.889076 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 2.0 seconds
+[0m15:37:12.890938 [debug] [ThreadPool]: On list_dev_public: Close
+[0m15:37:13.433345 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ff559b24-1d6c-494e-8bff-ed6b87c7b626', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x114c09050>]}
+[0m15:37:13.434736 [info ] [MainThread]: Concurrency: 5 threads (target='dev')
+[0m15:37:13.435606 [info ] [MainThread]: 
+[0m15:37:13.443042 [debug] [Thread-1 (]: Began running node model.dvdrental_analytics.active_customers_stg
+[0m15:37:13.444468 [info ] [Thread-1 (]: 1 of 1 START sql table model public.active_customers_stg ....................... [RUN]
+[0m15:37:13.445434 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_dev_public, now model.dvdrental_analytics.active_customers_stg)
+[0m15:37:13.446241 [debug] [Thread-1 (]: Began compiling node model.dvdrental_analytics.active_customers_stg
+[0m15:37:13.458008 [debug] [Thread-1 (]: Writing injected SQL for node "model.dvdrental_analytics.active_customers_stg"
+[0m15:37:13.459011 [debug] [Thread-1 (]: Began executing node model.dvdrental_analytics.active_customers_stg
+[0m15:37:13.491562 [debug] [Thread-1 (]: Writing runtime sql for node "model.dvdrental_analytics.active_customers_stg"
+[0m15:37:13.492828 [debug] [Thread-1 (]: Using snowflake connection "model.dvdrental_analytics.active_customers_stg"
+[0m15:37:13.493239 [debug] [Thread-1 (]: On model.dvdrental_analytics.active_customers_stg: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "dvdrental_analytics", "target_name": "dev", "node_id": "model.dvdrental_analytics.active_customers_stg"} */
+create or replace transient table dev.public.active_customers_stg
+         as
+        (with customer as  (
+    select first_name,
+    last_name,
+    email,
+    active,
+    address_id
+    from dvdrentals.public.customer
+),
+final as (
+    select * from customer
+    where active = 1
+)
+select * from final
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- with cte_name as(
+-- select from base_table),
+-- cte_name2 as(
+-- select from second_base_table)
+-- final_as(select from base_table1 join base_table2)
+
+-- select * from final
+        );
+[0m15:37:13.493588 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:37:15.464266 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 2.0 seconds
+[0m15:37:15.505014 [debug] [Thread-1 (]: On model.dvdrental_analytics.active_customers_stg: Close
+[0m15:37:16.029505 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ff559b24-1d6c-494e-8bff-ed6b87c7b626', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1120f41d0>]}
+[0m15:37:16.031255 [info ] [Thread-1 (]: 1 of 1 OK created sql table model public.active_customers_stg .................. [[32mSUCCESS 1[0m in 2.58s]
+[0m15:37:16.032680 [debug] [Thread-1 (]: Finished running node model.dvdrental_analytics.active_customers_stg
+[0m15:37:16.035359 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m15:37:16.036257 [debug] [MainThread]: Connection 'model.dvdrental_analytics.active_customers_stg' was properly closed.
+[0m15:37:16.037025 [info ] [MainThread]: 
+[0m15:37:16.038240 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 7.04 seconds (7.04s).
+[0m15:37:16.039604 [debug] [MainThread]: Command end result
+[0m15:37:16.077813 [info ] [MainThread]: 
+[0m15:37:16.078573 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m15:37:16.079044 [info ] [MainThread]: 
+[0m15:37:16.079436 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m15:37:16.084328 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 8.396531, "process_user_time": 2.548432, "process_kernel_time": 0.528435, "process_mem_max_rss": "132767744", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m15:37:16.085283 [debug] [MainThread]: Command `dbt run` succeeded at 15:37:16.085131 after 8.40 seconds
+[0m15:37:16.086326 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113c1a350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10fe66050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ffad4d0>]}
+[0m15:37:16.086856 [debug] [MainThread]: Flushing usage events
+[0m15:49:12.803844 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bf98890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bfde610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bff7750>]}
+
+
+============================== 15:49:12.814205 | 1357ed04-d001-48bf-82a3-d53eb00587ad ==============================
+[0m15:49:12.814205 [info ] [MainThread]: Running with dbt=1.8.3
+[0m15:49:12.815007 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/Users/omejevwe/Documents/DBT/dvdrental-analytics/logs', 'debug': 'False', 'profiles_dir': '/Users/omejevwe/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt run -s active_nigeria_customers', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m15:49:13.372252 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '1357ed04-d001-48bf-82a3-d53eb00587ad', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c003a10>]}
+[0m15:49:13.424378 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '1357ed04-d001-48bf-82a3-d53eb00587ad', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ba45a50>]}
+[0m15:49:13.425663 [info ] [MainThread]: Registered adapter: snowflake=1.8.3
+[0m15:49:13.450317 [debug] [MainThread]: checksum: 30bd4080c2bc8dee5936f8f60083ffbe1c906859d0fd965607c2144031479456, vars: {}, profile: , target: , version: 1.8.3
+[0m15:49:13.631872 [debug] [MainThread]: Partial parsing enabled: 1 files deleted, 1 files added, 0 files changed.
+[0m15:49:13.632581 [debug] [MainThread]: Partial parsing: added file: dvdrental_analytics://models/finance/active_nigeria_customers.sql
+[0m15:49:13.632910 [debug] [MainThread]: Partial parsing: deleted file: dvdrental_analytics://models/finance/active_us_customers.sql
+[0m15:49:13.940677 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '1357ed04-d001-48bf-82a3-d53eb00587ad', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ce6cd10>]}
+[0m15:49:14.062966 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '1357ed04-d001-48bf-82a3-d53eb00587ad', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10cf32f90>]}
+[0m15:49:14.063604 [info ] [MainThread]: Found 16 data tests, 3 models, 8 sources, 446 macros
+[0m15:49:14.064029 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '1357ed04-d001-48bf-82a3-d53eb00587ad', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d1b10d0>]}
+[0m15:49:14.065944 [info ] [MainThread]: 
+[0m15:49:14.066682 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m15:49:14.067689 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_dev'
+[0m15:49:14.085679 [debug] [ThreadPool]: Using snowflake connection "list_dev"
+[0m15:49:14.086243 [debug] [ThreadPool]: On list_dev: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "dvdrental_analytics", "target_name": "dev", "connection_name": "list_dev"} */
+show terse schemas in database dev
+    limit 10000
+[0m15:49:14.086593 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:49:15.971744 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 2.0 seconds
+[0m15:49:15.975892 [debug] [ThreadPool]: On list_dev: Close
+[0m15:49:16.487394 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dev, now list_dev_public)
+[0m15:49:16.498109 [debug] [ThreadPool]: Using snowflake connection "list_dev_public"
+[0m15:49:16.498619 [debug] [ThreadPool]: On list_dev_public: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "dvdrental_analytics", "target_name": "dev", "connection_name": "list_dev_public"} */
+show objects in dev.public limit 10000
+[0m15:49:16.498949 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m15:49:18.103004 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 2.0 seconds
+[0m15:49:18.107062 [debug] [ThreadPool]: On list_dev_public: Close
+[0m15:49:18.601747 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '1357ed04-d001-48bf-82a3-d53eb00587ad', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a782510>]}
+[0m15:49:18.603058 [info ] [MainThread]: Concurrency: 5 threads (target='dev')
+[0m15:49:18.604006 [info ] [MainThread]: 
+[0m15:49:18.610270 [debug] [Thread-1 (]: Began running node model.dvdrental_analytics.active_nigeria_customers
+[0m15:49:18.611513 [info ] [Thread-1 (]: 1 of 1 START sql table model public.active_nigeria_customers ................... [RUN]
+[0m15:49:18.612619 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_dev_public, now model.dvdrental_analytics.active_nigeria_customers)
+[0m15:49:18.613434 [debug] [Thread-1 (]: Began compiling node model.dvdrental_analytics.active_nigeria_customers
+[0m15:49:18.626676 [debug] [Thread-1 (]: Writing injected SQL for node "model.dvdrental_analytics.active_nigeria_customers"
+[0m15:49:18.628611 [debug] [Thread-1 (]: Began executing node model.dvdrental_analytics.active_nigeria_customers
+[0m15:49:18.662093 [debug] [Thread-1 (]: Writing runtime sql for node "model.dvdrental_analytics.active_nigeria_customers"
+[0m15:49:18.677923 [debug] [Thread-1 (]: Using snowflake connection "model.dvdrental_analytics.active_nigeria_customers"
+[0m15:49:18.696912 [debug] [Thread-1 (]: On model.dvdrental_analytics.active_nigeria_customers: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "dvdrental_analytics", "target_name": "dev", "node_id": "model.dvdrental_analytics.active_nigeria_customers"} */
+create or replace transient table dev.public.active_nigeria_customers
+         as
+        (with active_customers as (
+    select * from dev.public.active_customers_stg
+),
+final as (
+    select * from active_customers as cs
+    join dvdrentals.public.address as ad
+    ON cs.address_id =  ad.address_id
+    join dvdrentals.public.city as ct
+    ON ad.city_id = ct.city_id
+    join dvdrentals.public.country as cy
+    ON cy.country_id = cy.country_id
+)
+select first_name, last_name, email
+where country = 'Nigeria'
+        );
+[0m15:49:18.697565 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:49:21.907767 [debug] [Thread-1 (]: Snowflake adapter: Snowflake query id: 01b5a499-0000-fa58-0000-0001bc7a819d
+[0m15:49:21.908733 [debug] [Thread-1 (]: Snowflake adapter: Snowflake error: 000904 (42000): SQL compilation error: error line 15 at position 7
+invalid identifier 'FIRST_NAME'
+[0m15:49:21.909634 [debug] [Thread-1 (]: On model.dvdrental_analytics.active_nigeria_customers: Close
+[0m15:49:22.468417 [debug] [Thread-1 (]: Database Error in model active_nigeria_customers (models/finance/active_nigeria_customers.sql)
+  000904 (42000): SQL compilation error: error line 15 at position 7
+  invalid identifier 'FIRST_NAME'
+  compiled Code at target/run/dvdrental_analytics/models/finance/active_nigeria_customers.sql
+[0m15:49:22.471136 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1357ed04-d001-48bf-82a3-d53eb00587ad', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10def27d0>]}
+[0m15:49:22.472275 [error] [Thread-1 (]: 1 of 1 ERROR creating sql table model public.active_nigeria_customers .......... [[31mERROR[0m in 3.86s]
+[0m15:49:22.473267 [debug] [Thread-1 (]: Finished running node model.dvdrental_analytics.active_nigeria_customers
+[0m15:49:22.476419 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m15:49:22.476967 [debug] [MainThread]: Connection 'model.dvdrental_analytics.active_nigeria_customers' was properly closed.
+[0m15:49:22.477523 [info ] [MainThread]: 
+[0m15:49:22.478014 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 8.41 seconds (8.41s).
+[0m15:49:22.479004 [debug] [MainThread]: Command end result
+[0m15:49:22.513672 [info ] [MainThread]: 
+[0m15:49:22.514255 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m15:49:22.514726 [info ] [MainThread]: 
+[0m15:49:22.515156 [error] [MainThread]:   Database Error in model active_nigeria_customers (models/finance/active_nigeria_customers.sql)
+  000904 (42000): SQL compilation error: error line 15 at position 7
+  invalid identifier 'FIRST_NAME'
+  compiled Code at target/run/dvdrental_analytics/models/finance/active_nigeria_customers.sql
+[0m15:49:22.515573 [info ] [MainThread]: 
+[0m15:49:22.515965 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+[0m15:49:22.518320 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 9.796686, "process_user_time": 2.577107, "process_kernel_time": 0.578518, "process_mem_max_rss": "133193728", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m15:49:22.519017 [debug] [MainThread]: Command `dbt run` failed at 15:49:22.518899 after 9.80 seconds
+[0m15:49:22.519629 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10831dfd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bff6f90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bff7090>]}
+[0m15:49:22.520376 [debug] [MainThread]: Flushing usage events
+[0m15:51:08.547728 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e0c05d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e0fc210>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e11f2d0>]}
+
+
+============================== 15:51:08.554514 | bb570e72-f2b5-4ff2-a673-7f99a6a02829 ==============================
+[0m15:51:08.554514 [info ] [MainThread]: Running with dbt=1.8.3
+[0m15:51:08.555173 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': '/Users/omejevwe/.dbt', 'log_path': '/Users/omejevwe/Documents/DBT/dvdrental-analytics/logs', 'version_check': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run -s active_nigeria_customers', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m15:51:09.091238 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'bb570e72-f2b5-4ff2-a673-7f99a6a02829', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e11f210>]}
+[0m15:51:09.142110 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'bb570e72-f2b5-4ff2-a673-7f99a6a02829', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10db79710>]}
+[0m15:51:09.143641 [info ] [MainThread]: Registered adapter: snowflake=1.8.3
+[0m15:51:09.168427 [debug] [MainThread]: checksum: 30bd4080c2bc8dee5936f8f60083ffbe1c906859d0fd965607c2144031479456, vars: {}, profile: , target: , version: 1.8.3
+[0m15:51:09.343166 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m15:51:09.344097 [debug] [MainThread]: Partial parsing: updated file: dvdrental_analytics://models/finance/active_nigeria_customers.sql
+[0m15:51:09.651804 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'bb570e72-f2b5-4ff2-a673-7f99a6a02829', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f304210>]}
+[0m15:51:09.813173 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'bb570e72-f2b5-4ff2-a673-7f99a6a02829', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ef53b50>]}
+[0m15:51:09.813771 [info ] [MainThread]: Found 16 data tests, 3 models, 8 sources, 446 macros
+[0m15:51:09.814156 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'bb570e72-f2b5-4ff2-a673-7f99a6a02829', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ef754d0>]}
+[0m15:51:09.816058 [info ] [MainThread]: 
+[0m15:51:09.816866 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m15:51:09.817894 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_dev'
+[0m15:51:09.832284 [debug] [ThreadPool]: Using snowflake connection "list_dev"
+[0m15:51:09.832766 [debug] [ThreadPool]: On list_dev: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "dvdrental_analytics", "target_name": "dev", "connection_name": "list_dev"} */
+show terse schemas in database dev
+    limit 10000
+[0m15:51:09.833121 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:51:11.718312 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 2.0 seconds
+[0m15:51:11.721603 [debug] [ThreadPool]: On list_dev: Close
+[0m15:51:12.242118 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dev, now list_dev_public)
+[0m15:51:12.252438 [debug] [ThreadPool]: Using snowflake connection "list_dev_public"
+[0m15:51:12.252861 [debug] [ThreadPool]: On list_dev_public: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "dvdrental_analytics", "target_name": "dev", "connection_name": "list_dev_public"} */
+show objects in dev.public limit 10000
+[0m15:51:12.253156 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m15:51:13.895070 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 2.0 seconds
+[0m15:51:13.899870 [debug] [ThreadPool]: On list_dev_public: Close
+[0m15:51:14.429436 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'bb570e72-f2b5-4ff2-a673-7f99a6a02829', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c8d5a50>]}
+[0m15:51:14.430692 [info ] [MainThread]: Concurrency: 5 threads (target='dev')
+[0m15:51:14.431414 [info ] [MainThread]: 
+[0m15:51:14.436716 [debug] [Thread-1 (]: Began running node model.dvdrental_analytics.active_nigeria_customers
+[0m15:51:14.437940 [info ] [Thread-1 (]: 1 of 1 START sql table model public.active_nigeria_customers ................... [RUN]
+[0m15:51:14.438891 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_dev_public, now model.dvdrental_analytics.active_nigeria_customers)
+[0m15:51:14.439547 [debug] [Thread-1 (]: Began compiling node model.dvdrental_analytics.active_nigeria_customers
+[0m15:51:14.452405 [debug] [Thread-1 (]: Writing injected SQL for node "model.dvdrental_analytics.active_nigeria_customers"
+[0m15:51:14.453386 [debug] [Thread-1 (]: Began executing node model.dvdrental_analytics.active_nigeria_customers
+[0m15:51:14.483141 [debug] [Thread-1 (]: Writing runtime sql for node "model.dvdrental_analytics.active_nigeria_customers"
+[0m15:51:14.484748 [debug] [Thread-1 (]: Using snowflake connection "model.dvdrental_analytics.active_nigeria_customers"
+[0m15:51:14.485281 [debug] [Thread-1 (]: On model.dvdrental_analytics.active_nigeria_customers: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "dvdrental_analytics", "target_name": "dev", "node_id": "model.dvdrental_analytics.active_nigeria_customers"} */
+create or replace transient table dev.public.active_nigeria_customers
+         as
+        (with active_customers as (
+    select * from dev.public.active_customers_stg
+),
+final as (
+    select * from active_customers as cs
+    join dvdrentals.public.address as ad
+    ON cs.address_id =  ad.address_id
+    join dvdrentals.public.city as ct
+    ON ad.city_id = ct.city_id
+    join dvdrentals.public.country as cy
+    ON cy.country_id = cy.country_id
+)
+select first_name, last_name, email
+where country = 'Nigeria'
+from final
+        );
+[0m15:51:14.485860 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:51:15.879650 [debug] [Thread-1 (]: Snowflake adapter: Snowflake query id: 01b5a49b-0000-fa58-0000-0001bc7a81a1
+[0m15:51:15.880491 [debug] [Thread-1 (]: Snowflake adapter: Snowflake error: 001003 (42000): SQL compilation error:
+syntax error line 17 at position 0 unexpected 'from'.
+[0m15:51:15.881358 [debug] [Thread-1 (]: On model.dvdrental_analytics.active_nigeria_customers: Close
+[0m15:51:16.392076 [debug] [Thread-1 (]: Database Error in model active_nigeria_customers (models/finance/active_nigeria_customers.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 17 at position 0 unexpected 'from'.
+  compiled Code at target/run/dvdrental_analytics/models/finance/active_nigeria_customers.sql
+[0m15:51:16.394722 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'bb570e72-f2b5-4ff2-a673-7f99a6a02829', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11403dbd0>]}
+[0m15:51:16.395884 [error] [Thread-1 (]: 1 of 1 ERROR creating sql table model public.active_nigeria_customers .......... [[31mERROR[0m in 1.95s]
+[0m15:51:16.397025 [debug] [Thread-1 (]: Finished running node model.dvdrental_analytics.active_nigeria_customers
+[0m15:51:16.400399 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m15:51:16.401054 [debug] [MainThread]: Connection 'model.dvdrental_analytics.active_nigeria_customers' was properly closed.
+[0m15:51:16.401672 [info ] [MainThread]: 
+[0m15:51:16.402490 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 6.58 seconds (6.58s).
+[0m15:51:16.403758 [debug] [MainThread]: Command end result
+[0m15:51:16.446913 [info ] [MainThread]: 
+[0m15:51:16.447591 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m15:51:16.448067 [info ] [MainThread]: 
+[0m15:51:16.448557 [error] [MainThread]:   Database Error in model active_nigeria_customers (models/finance/active_nigeria_customers.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 17 at position 0 unexpected 'from'.
+  compiled Code at target/run/dvdrental_analytics/models/finance/active_nigeria_customers.sql
+[0m15:51:16.448960 [info ] [MainThread]: 
+[0m15:51:16.449510 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+[0m15:51:16.451775 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 7.979539, "process_user_time": 2.558047, "process_kernel_time": 0.552364, "process_mem_max_rss": "133378048", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m15:51:16.453030 [debug] [MainThread]: Command `dbt run` failed at 15:51:16.452674 after 7.98 seconds
+[0m15:51:16.453610 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a441f10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e11f110>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e11f090>]}
+[0m15:51:16.454162 [debug] [MainThread]: Flushing usage events
+[0m15:52:09.598461 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10788c790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1078d25d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1078eb550>]}
+
+
+============================== 15:52:09.607130 | 10996075-aad9-4d98-8697-fa155d967581 ==============================
+[0m15:52:09.607130 [info ] [MainThread]: Running with dbt=1.8.3
+[0m15:52:09.607914 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/omejevwe/.dbt', 'version_check': 'True', 'warn_error': 'None', 'log_path': '/Users/omejevwe/Documents/DBT/dvdrental-analytics/logs', 'fail_fast': 'False', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'invocation_command': 'dbt run -s active_nigeria_customers', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m15:52:10.158581 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '10996075-aad9-4d98-8697-fa155d967581', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1078f7d90>]}
+[0m15:52:10.210846 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '10996075-aad9-4d98-8697-fa155d967581', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107335a10>]}
+[0m15:52:10.212584 [info ] [MainThread]: Registered adapter: snowflake=1.8.3
+[0m15:52:10.238827 [debug] [MainThread]: checksum: 30bd4080c2bc8dee5936f8f60083ffbe1c906859d0fd965607c2144031479456, vars: {}, profile: , target: , version: 1.8.3
+[0m15:52:10.405478 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m15:52:10.406262 [debug] [MainThread]: Partial parsing: updated file: dvdrental_analytics://models/finance/active_nigeria_customers.sql
+[0m15:52:10.708750 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '10996075-aad9-4d98-8697-fa155d967581', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1088867d0>]}
+[0m15:52:10.833379 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '10996075-aad9-4d98-8697-fa155d967581', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1088b1850>]}
+[0m15:52:10.833994 [info ] [MainThread]: Found 16 data tests, 3 models, 8 sources, 446 macros
+[0m15:52:10.834376 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '10996075-aad9-4d98-8697-fa155d967581', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1089d4e90>]}
+[0m15:52:10.836037 [info ] [MainThread]: 
+[0m15:52:10.836776 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m15:52:10.837781 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_dev'
+[0m15:52:10.853566 [debug] [ThreadPool]: Using snowflake connection "list_dev"
+[0m15:52:10.854088 [debug] [ThreadPool]: On list_dev: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "dvdrental_analytics", "target_name": "dev", "connection_name": "list_dev"} */
+show terse schemas in database dev
+    limit 10000
+[0m15:52:10.854581 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:52:12.479243 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 2.0 seconds
+[0m15:52:12.481070 [debug] [ThreadPool]: On list_dev: Close
+[0m15:52:13.015979 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dev, now list_dev_public)
+[0m15:52:13.032357 [debug] [ThreadPool]: Using snowflake connection "list_dev_public"
+[0m15:52:13.033036 [debug] [ThreadPool]: On list_dev_public: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "dvdrental_analytics", "target_name": "dev", "connection_name": "list_dev_public"} */
+show objects in dev.public limit 10000
+[0m15:52:13.033462 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m15:52:14.599389 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 2.0 seconds
+[0m15:52:14.603208 [debug] [ThreadPool]: On list_dev_public: Close
+[0m15:52:15.144198 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '10996075-aad9-4d98-8697-fa155d967581', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108b27710>]}
+[0m15:52:15.145472 [info ] [MainThread]: Concurrency: 5 threads (target='dev')
+[0m15:52:15.146255 [info ] [MainThread]: 
+[0m15:52:15.152738 [debug] [Thread-1 (]: Began running node model.dvdrental_analytics.active_nigeria_customers
+[0m15:52:15.153759 [info ] [Thread-1 (]: 1 of 1 START sql table model public.active_nigeria_customers ................... [RUN]
+[0m15:52:15.154650 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_dev_public, now model.dvdrental_analytics.active_nigeria_customers)
+[0m15:52:15.155393 [debug] [Thread-1 (]: Began compiling node model.dvdrental_analytics.active_nigeria_customers
+[0m15:52:15.168483 [debug] [Thread-1 (]: Writing injected SQL for node "model.dvdrental_analytics.active_nigeria_customers"
+[0m15:52:15.170075 [debug] [Thread-1 (]: Began executing node model.dvdrental_analytics.active_nigeria_customers
+[0m15:52:15.199397 [debug] [Thread-1 (]: Writing runtime sql for node "model.dvdrental_analytics.active_nigeria_customers"
+[0m15:52:15.200790 [debug] [Thread-1 (]: Using snowflake connection "model.dvdrental_analytics.active_nigeria_customers"
+[0m15:52:15.201170 [debug] [Thread-1 (]: On model.dvdrental_analytics.active_nigeria_customers: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "dvdrental_analytics", "target_name": "dev", "node_id": "model.dvdrental_analytics.active_nigeria_customers"} */
+create or replace transient table dev.public.active_nigeria_customers
+         as
+        (with active_customers as (
+    select * from dev.public.active_customers_stg
+),
+final as (
+    select * from active_customers as cs
+    join dvdrentals.public.address as ad
+    ON cs.address_id =  ad.address_id
+    join dvdrentals.public.city as ct
+    ON ad.city_id = ct.city_id
+    join dvdrentals.public.country as cy
+    ON cy.country_id = cy.country_id
+)
+select first_name, last_name, email, country
+from final
+where country = 'Nigeria'
+        );
+[0m15:52:15.201526 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:52:18.028709 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 3.0 seconds
+[0m15:52:18.053664 [debug] [Thread-1 (]: On model.dvdrental_analytics.active_nigeria_customers: Close
+[0m15:52:18.579364 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '10996075-aad9-4d98-8697-fa155d967581', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1097815d0>]}
+[0m15:52:18.580929 [info ] [Thread-1 (]: 1 of 1 OK created sql table model public.active_nigeria_customers .............. [[32mSUCCESS 1[0m in 3.42s]
+[0m15:52:18.582273 [debug] [Thread-1 (]: Finished running node model.dvdrental_analytics.active_nigeria_customers
+[0m15:52:18.584785 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m15:52:18.585503 [debug] [MainThread]: Connection 'model.dvdrental_analytics.active_nigeria_customers' was properly closed.
+[0m15:52:18.586106 [info ] [MainThread]: 
+[0m15:52:18.586810 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 7.75 seconds (7.75s).
+[0m15:52:18.589223 [debug] [MainThread]: Command end result
+[0m15:52:18.627888 [info ] [MainThread]: 
+[0m15:52:18.628732 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m15:52:18.629499 [info ] [MainThread]: 
+[0m15:52:18.629958 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m15:52:18.631623 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 9.108053, "process_user_time": 2.53713, "process_kernel_time": 0.460195, "process_mem_max_rss": "132182016", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m15:52:18.632274 [debug] [MainThread]: Command `dbt run` succeeded at 15:52:18.632165 after 9.11 seconds
+[0m15:52:18.632683 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103c11fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103d59450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103cad010>]}
+[0m15:52:18.633036 [debug] [MainThread]: Flushing usage events

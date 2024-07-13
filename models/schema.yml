@@ -1,0 +1,93 @@
+sources:
+  - name: dvdrentals
+    description: 'dvd rentals of customers'
+    database: dvdrentals
+    schema: public
+    tables:
+      - name: rentals
+        description: 'all the customers rentals'
+        columns:
+          - name: rental_id
+            description: 'This is a unique identifier for a rentals'
+            tests:
+              - unique
+              - not_null
+
+      - name: customer
+        description: 'This table has basic information about a customer as well as some derived facts based on a customers orders'
+        columns:
+          - name: customer_id
+            description: 'This is a unique identifier for a customer'
+            tests:
+              - unique
+              - not_null
+          - name: first_name
+            description: 'Customer firstname'
+          - name: last_name
+            description: 'Customer lastname'
+          - name: email
+            description: 'Customer email'  
+
+      - name: film
+        description: 'This table has basic information about available films'
+        columns:
+          - name: film_id
+            description: 'This is a unique identifier for the film table'
+            tests:
+              - unique
+              - not_null
+              
+      - name: actor
+        description: 'This table has basic information about actors that act movies'
+        columns:
+          - name: actor_id
+            description: 'This is a unique identifier for the film table'
+            tests:
+              - unique
+              - not_null
+
+      - name: address
+        description: 'This table has basic information about customers addresses'
+        columns:
+          - name: address_id
+            description: 'This is a unique identifier for the address table'
+            tests:
+              - unique
+              - not_null
+          - name: phone
+            description: 'Customer phone'  
+
+      - name: city
+        description: 'This table has basic information about customers city'
+        columns:
+          - name: city_id
+            description: 'This is a unique identifier for the city table'
+            tests:
+              - unique
+              - not_null
+          - name: city
+            description: 'Customer city'  
+
+      - name: country
+        description: 'This table has basic information about customers country'
+        columns:
+          - name: country_id
+            description: 'This is a unique identifier for the address table'
+            tests:
+              - unique
+              - not_null
+          - name: country
+            description: 'Customer country'  
+            
+      - name: payment
+        description: 'This table has basic information about customers payment history'
+        columns:
+          - name: payment_id
+            description: 'This is a unique identifier for the payment table'
+            tests:
+              - unique
+              - not_null
+          - name: amount
+            description: 'amount paid'  
+          
+            
