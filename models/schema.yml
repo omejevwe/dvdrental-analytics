@@ -4,7 +4,7 @@ sources:
     database: dvdrentals
     schema: public
     tables:
-      - name: rentals
+      - name: rental
         description: 'all the customers rentals'
         columns:
           - name: rental_id
@@ -89,5 +89,13 @@ sources:
               - not_null
           - name: amount
             description: 'amount paid'  
-          
-            
+      
+      - name: inventory
+        description: 'This table has basic information about customers inventory'
+        columns:
+          - name: inventory_id
+            description: 'This is a unique identifier for the inventory table'
+            tests:
+              - unique
+              - not_null
+         
